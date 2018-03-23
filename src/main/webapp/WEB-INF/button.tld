@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE taglib
+  PUBLIC "-//Sun Microsystems, Inc.//DTD JSP Tag Library 1.1//EN"
+  "http://java.sun.com/j2ee/dtds/web-jsptaglib_1_1.dtd">
+
+<taglib>
+  <tlibversion>1.0</tlibversion>
+  <jspversion>1.1</jspversion>
+  <shortname>button</shortname>
+
+  <info>
+    The tag library of button
+    author:peng.ning
+  </info>
+
+  <!--====================button:btn=====================-->
+  <tag>
+    <name>btn</name>
+    <tagclass>com.pinhuba.web.taglib.button.ButtonTag</tagclass>
+
+    <bodycontent>JSP</bodycontent>
+    <info>
+      button tag output the button which pre-designed
+    </info>
+    <attribute>
+      <name>value</name>
+      <required>false</required>
+      <rtexprvalue>true</rtexprvalue>
+    </attribute>
+    <attribute>
+      <name>onclick</name>
+      <required>true</required>
+      <rtexprvalue>false</rtexprvalue>
+    </attribute>
+    <attribute>
+      <name>title</name>
+      <required>false</required>
+      <rtexprvalue>true</rtexprvalue>
+    </attribute>
+    <attribute>
+      <name>imgsrc</name>
+      <required>false</required>
+      <rtexprvalue>true</rtexprvalue>
+    </attribute>
+    <attribute>
+      <name>width</name>
+      <required>false</required>
+      <rtexprvalue>false</rtexprvalue>
+    </attribute>
+    <attribute>
+      <name>tabindex</name>
+      <required>false</required>
+      <rtexprvalue>false</rtexprvalue>
+    </attribute>
+  </tag>
+  <!--======================button:btn=========================-->
+  
+  <!--====================button:cancel=====================-->
+  <tag>
+    <name>cancel</name>
+    <tagclass>com.pinhuba.web.taglib.button.ButtonCancelTag</tagclass>
+
+    <bodycontent>JSP</bodycontent>
+    <info>
+      ButtonCancel tag output the button which pre-designed
+    </info>
+    <attribute>
+      <name>value</name>
+      <required>false</required>
+      <rtexprvalue>true</rtexprvalue>
+    </attribute>
+    <attribute>
+      <name>onclick</name>
+      <required>false</required>
+      <rtexprvalue>false</rtexprvalue>
+    </attribute>
+    <attribute>
+      <name>title</name>
+      <required>false</required>
+      <rtexprvalue>true</rtexprvalue>
+    </attribute>
+    <attribute>
+      <name>imgshow</name>
+      <required>false</required>
+      <rtexprvalue>true</rtexprvalue>
+    </attribute>
+    <attribute>
+      <name>width</name>
+      <required>false</required>
+      <rtexprvalue>false</rtexprvalue>
+    </attribute>
+    <attribute>
+      <name>tabindex</name>
+      <required>false</required>
+      <rtexprvalue>false</rtexprvalue>
+    </attribute>
+  </tag>
+  <!--======================button:cancel=========================-->
+  
+  <!--====================button:img=====================-->
+  <tag>
+    <name>img</name>
+    <tagclass>com.pinhuba.web.taglib.button.ButtonImageTag</tagclass>
+
+    <bodycontent>JSP</bodycontent>
+    <info>
+      buttonImg tag output the image which pre-designed
+    </info>
+    <attribute>
+      <name>onclick</name>
+      <required>true</required>
+      <rtexprvalue>false</rtexprvalue>
+    </attribute>
+    <attribute>
+      <name>title</name>
+      <required>false</required>
+      <rtexprvalue>true</rtexprvalue>
+    </attribute>
+    <attribute>
+      <name>imgsrc</name>
+      <required>true</required>
+      <rtexprvalue>true</rtexprvalue>
+    </attribute>
+  </tag>
+  <!--======================button:img=========================-->
+</taglib>

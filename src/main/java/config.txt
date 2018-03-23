@@ -1,0 +1,44 @@
+//复制到spring-service.xml文件 Dwr Base配置区
+<dwr:convert type="hibernate3" class="com.pinhuba.core.pojo.DxEducateTemp"/>
+
+
+//复制到hbm.mysql.xml文件
+<class name="com.pinhuba.core.pojo.DxEducateTemp" table="dx_educate_temp" >
+    <id name="primaryKey" type="java.lang.String">
+        <column name="ID" />
+    </id>
+    <property name="name" type="java.lang.String">
+        <column name="name"/>
+    </property>
+    <property name="experience" type="java.lang.String">
+        <column name="experience"/>
+    </property>
+    <property name="certificate" type="java.lang.String">
+        <column name="certificate"/>
+    </property>
+    <property name="specialty" type="java.lang.String">
+        <column name="specialty"/>
+    </property>
+    <property name="date" type="java.lang.String">
+        <column name="date"/>
+    </property>
+    <property name="year" type="java.lang.String">
+        <column name="year"/>
+    </property>
+    <property name="pastspecialty" type="java.lang.String">
+        <column name="pastspecialty"/>
+    </property>
+    <property name="pastdate" type="java.lang.String">
+        <column name="pastdate"/>
+    </property>
+    <property name="pstyear" type="java.lang.String">
+        <column name="pstyear"/>
+    </property>
+    <property name="empid" type="java.lang.String">
+        <column name="empid"/>
+    </property>
+    <property name="flag" type="java.lang.String">
+        <column name="flag"/>
+    </property>
+</class>
+

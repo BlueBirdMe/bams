@@ -1,0 +1,74 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="bams:war exploded">
+    <output-path>$PROJECT_DIR$/target/bams-master</output-path>
+    <root id="root">
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="bams" />
+        </element>
+        <element id="directory" name="lib">
+          <element id="library" level="project" name="Maven: log4j:log4j:1.2.17" />
+          <element id="library" level="project" name="Maven: org.slf4j:slf4j-api:1.7.2" />
+          <element id="library" level="project" name="Maven: org.slf4j:slf4j-log4j12:1.7.2" />
+          <element id="library" level="project" name="Maven: commons-lang:commons-lang:2.6" />
+          <element id="library" level="project" name="Maven: commons-io:commons-io:2.4" />
+          <element id="library" level="project" name="Maven: org.directwebremoting:dwr:2.0.3" />
+          <element id="library" level="project" name="Maven: com.belerweb:pinyin4j:2.5.0" />
+          <element id="library" level="project" name="Maven: net.fckeditor:java-core:2.6" />
+          <element id="library" level="project" name="Maven: commons-fileupload:commons-fileupload:1.2.1" />
+          <element id="library" level="project" name="Maven: org.devlib.schmidt:imageinfo:1.9" />
+          <element id="library" level="project" name="Maven: com.cloudhopper.proxool:proxool:0.9.1" />
+          <element id="library" level="project" name="Maven: com.cloudhopper.proxool:proxool-cglib:0.9.1" />
+          <element id="library" level="project" name="Maven: mysql:mysql-connector-java:5.1.25" />
+          <element id="library" level="project" name="Maven: org.quartz-scheduler:quartz:1.7.2" />
+          <element id="library" level="project" name="Maven: jstl:jstl:1.2" />
+          <element id="library" level="project" name="Maven: net.sourceforge.jexcelapi:jxl:2.6.12" />
+          <element id="library" level="project" name="Maven: org.jsoup:jsoup:1.7.2" />
+          <element id="library" level="project" name="Maven: servlets.com:cos:05Nov2002" />
+          <element id="library" level="project" name="Maven: javax.validation:validation-api:1.1.0.Final" />
+          <element id="library" level="project" name="Maven: org.hibernate:hibernate-core:3.3.2.GA" />
+          <element id="library" level="project" name="Maven: antlr:antlr:2.7.6" />
+          <element id="library" level="project" name="Maven: commons-collections:commons-collections:3.1" />
+          <element id="library" level="project" name="Maven: dom4j:dom4j:1.6.1" />
+          <element id="library" level="project" name="Maven: javax.transaction:jta:1.1" />
+          <element id="library" level="project" name="Maven: org.javassist:javassist:3.15.0-GA" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-context:3.1.2.RELEASE" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-expression:3.1.2.RELEASE" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-asm:3.1.2.RELEASE" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-core:3.1.2.RELEASE" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-beans:3.1.2.RELEASE" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-aop:3.1.2.RELEASE" />
+          <element id="library" level="project" name="Maven: aopalliance:aopalliance:1.0" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-orm:3.1.2.RELEASE" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-jdbc:3.1.2.RELEASE" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-tx:3.1.2.RELEASE" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-web:3.1.2.RELEASE" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-webmvc:3.1.2.RELEASE" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-context-support:3.1.2.RELEASE" />
+          <element id="library" level="project" name="Maven: cglib:cglib:2.2.2" />
+          <element id="library" level="project" name="Maven: asm:asm:3.3.1" />
+          <element id="library" level="project" name="Maven: org.activiti:activiti-spring:5.16" />
+          <element id="library" level="project" name="Maven: org.apache.commons:commons-lang3:3.3.2" />
+          <element id="library" level="project" name="Maven: org.slf4j:jcl-over-slf4j:1.7.6" />
+          <element id="library" level="project" name="Maven: org.activiti:activiti-engine:5.16" />
+          <element id="library" level="project" name="Maven: org.activiti:activiti-bpmn-converter:5.16" />
+          <element id="library" level="project" name="Maven: org.activiti:activiti-bpmn-model:5.16" />
+          <element id="library" level="project" name="Maven: org.activiti:activiti-process-validation:5.16" />
+          <element id="library" level="project" name="Maven: org.activiti:activiti-image-generator:5.16" />
+          <element id="library" level="project" name="Maven: org.mybatis:mybatis:3.2.5" />
+          <element id="library" level="project" name="Maven: joda-time:joda-time:2.1" />
+          <element id="library" level="project" name="Maven: javax.mail:mail:1.4" />
+          <element id="library" level="project" name="Maven: javax.activation:activation:1.1" />
+          <element id="library" level="project" name="Maven: org.freemarker:freemarker:2.3.20" />
+          <element id="library" level="project" name="Maven: net.sf.json-lib:json-lib:jdk15:2.3" />
+          <element id="library" level="project" name="Maven: commons-beanutils:commons-beanutils:1.8.0" />
+          <element id="library" level="project" name="Maven: net.sf.ezmorph:ezmorph:1.0.6" />
+        </element>
+      </element>
+      <element id="directory" name="META-INF">
+        <element id="file-copy" path="$PROJECT_DIR$/target/bams-master/META-INF/MANIFEST.MF" />
+      </element>
+      <element id="javaee-facet-resources" facet="bams/web/Web" />
+    </root>
+  </artifact>
+</component>

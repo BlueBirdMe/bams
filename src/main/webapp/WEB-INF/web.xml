@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="2.4" xmlns="http://java.sun.com/xml/ns/j2ee"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee   http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd">
+
+	<!-- 定义不同的ROOTKEY -->
+	<context-param>
+		<param-name>webAppRootKey</param-name>
+		<param-value>bams</param-value>
+	</context-param>
+	<!--加载Log4j -->
+	<context-param>
+		<param-name>log4jConfigLocation</param-name>
+		<param-value>classpath:log/console.properties</param-value>
+	</context-param>
+	<context-param>
+		<param-name>log4jRefreshInterval</param-name>
+		<!--Spring默认刷新Log4j配置文件的间隔,单位为millisecond -->
+		<param-value>60000</param-value>
+	</context-param>
+	<!-- 加载spring容器 -->
+	<context-param>
+		<param-name>contextConfigLocation</param-name>
+		<param-value>classpath:springconf/spring-config-web.xml</param-value>
+	</context-param>
+
+	<filter>
+		<filter-name>CharacterEncodingFilter</filter-name>
+		<filter-class>org.springframework.web.filter.CharacterEncodingFilter</filter-class>
+		<init-param>
+			<param-name>encoding</param-name>
+			<param-value>utf-8</param-value>
+		</init-param>
+		<init-param>
+			<param-name>forceEncoding</param-name>
+			<param-value>true</param-value>
+		</init-param>
+	</filter>
+	<filter-mapping>
+		<filter-name>CharacterEncodingFilter</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping> 
+	
+	<filter>
+		<filter-name>PermissionFilter</filter-name>
+		<filter-class>com.pinhuba.web.filter.servletfilter.PermissionFilter</filter-class>
+	</filter>
+	<filter-mapping>
+		<filter-name>PermissionFilter</filter-name>
+		<url-pattern>/erp/*</url-pattern>
+	</filter-mapping>
+
+	<filter>
+		<filter-name>SysManageFilter</filter-name>
+		<filter-class>com.pinhuba.web.filter.servletfilter.SysManageFilter</filter-class>
+	</filter>
+	<filter-mapping>
+		<filter-name>SysManageFilter</filter-name>
+		<url-pattern>/erp/system_manger/*</url-pattern>
+	</filter-mapping>
+
+	<listener>
+		<listener-class>org.springframework.web.util.Log4jConfigListener</listener-class>
+	</listener>
+	<listener>
+		<listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+	</listener>
+	<listener>
+		<listener-class>org.springframework.web.util.IntrospectorCleanupListener</listener-class>
+	</listener>
+	<listener>
+		<listener-class>com.pinhuba.web.listener.InitErp</listener-class>
+	</listener>
+	
+	<servlet>
+		<servlet-name>Bams</servlet-name>
+		<servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+		<init-param>
+			<param-name>contextConfigLocation</param-name>
+			<param-value>classpath:springconf/spring-servlet.xml</param-value>
+		</init-param>
+		<load-on-startup>1</load-on-startup>
+	</servlet>
+	
+	<servlet-mapping>
+		<servlet-name>Bams</servlet-name>
+		<url-pattern>*.do</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>DBPoolInfomation</servlet-name>
+		<servlet-class>org.logicalcobwebs.proxool.admin.servlet.AdminServlet</servlet-class>
+	</servlet>
+	<!-- 加载dwr -->
+	<servlet>
+		<servlet-name>dwr-invoker</servlet-name>
+		<servlet-class>org.directwebremoting.spring.DwrSpringServlet</servlet-class>
+		<init-param>
+			<!-- dwr测试页面，上线时设置为false -->
+			<param-name>debug</param-name>
+			<param-value>true</param-value>
+		</init-param>
+		<!-- dwr拦截 -->
+		<init-param>
+			<param-name>org.directwebremoting.extend.Remoter</param-name>
+			<param-value>com.pinhuba.web.filter.dwrRemoter.DWRRemoter</param-value>
+		</init-param>
+		<init-param>
+			<!-- 防止其他域提交访问 -->
+			<param-name>crossDomainSessionSecurity</param-name>
+			<param-value>false</param-value>
+		</init-param>
+		<!-- 压缩js -->
+		<init-param>
+			<param-name>scriptCompressed</param-name>
+			<param-value>true</param-value>
+		</init-param>
+		<load-on-startup>1</load-on-startup>
+	</servlet>
+
+	<servlet>
+		<servlet-name>CheckSessionServlet</servlet-name>
+		<servlet-class>com.pinhuba.web.servlet.user.CheckSessionServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>UserLoginServlet</servlet-name>
+		<servlet-class>com.pinhuba.web.servlet.user.UserLoginServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>ShowSysImageInfoServlet</servlet-name>
+		<servlet-class>com.pinhuba.web.servlet.file.ShowSysImageInfoServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>DownloadFileServlet</servlet-name>
+		<servlet-class>com.pinhuba.web.servlet.file.DownloadFileServlet</servlet-class>
+	</servlet>
+	<!-- fck使用 -->
+	<servlet>
+		<servlet-name>ConnectorServlet</servlet-name>
+		<servlet-class>net.fckeditor.connector.ConnectorServlet</servlet-class>
+		<load-on-startup>2</load-on-startup>
+	</servlet>
+	<servlet>
+		<servlet-name>UploadFileServlet</servlet-name>
+		<servlet-class>com.pinhuba.web.servlet.file.UploadFileServlet</servlet-class>
+	</servlet>
+	<!-- 生成验证码 -->
+	<servlet>
+		<servlet-name>CreateValidCodeServlet</servlet-name>
+		<servlet-class>com.pinhuba.web.servlet.user.CreateValidCodeServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>CompanyRegServlet</servlet-name>
+		<servlet-class>com.pinhuba.web.servlet.user.CompanyRegServlet</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>ConnectorServlet</servlet-name>
+		<!-- Do not wrap this line otherwise Glassfish will fail to load this file -->
+		<url-pattern>/fckeditor/editor/filemanager/connectors/*</url-pattern>
+	</servlet-mapping>
+
+	<!--fck end -->
+
+
+	<servlet-mapping>
+		<servlet-name>DBPoolInfomation</servlet-name>
+		<url-pattern>/projectdbinfoView.info</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>dwr-invoker</servlet-name>
+		<url-pattern>/dwr/*</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>CheckSessionServlet</servlet-name>
+		<url-pattern>/checkSession.do</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>UserLoginServlet</servlet-name>
+		<url-pattern>/login.do</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>ShowSysImageInfoServlet</servlet-name>
+		<url-pattern>/showimg.do</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>DownloadFileServlet</servlet-name>
+		<url-pattern>/download.do</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>UploadFileServlet</servlet-name>
+		<url-pattern>/upload.do</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>CreateValidCodeServlet</servlet-name>
+		<url-pattern>/validcode.do</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>CompanyRegServlet</servlet-name>
+		<url-pattern>/companyreg.do</url-pattern>
+	</servlet-mapping>
+
+	<session-config>
+		<session-timeout>60</session-timeout>
+	</session-config>
+	<welcome-file-list>
+		<welcome-file>login.jsp</welcome-file>
+	</welcome-file-list>
+	<error-page>
+		<exception-type>java.lang.Exception</exception-type>
+		<location>/error.jsp</location>
+	</error-page>
+	<error-page>
+		<exception-type>java.lang.Error</exception-type>
+		<location>/error.jsp</location>
+	</error-page>
+	<error-page>
+		<exception-type>java.lang.RuntimeException</exception-type>
+		<location>/error.jsp</location>
+	</error-page>
+	<error-page>
+		<error-code>404</error-code>
+		<location>/error.jsp</location>
+	</error-page>
+	<error-page>
+		<error-code>500</error-code>
+		<location>/error.jsp</location>
+	</error-page>
+
+	<login-config>
+		<auth-method>BASIC</auth-method>
+	</login-config>
+	<jsp-config>
+		<taglib>
+			<taglib-uri>http://www.pinhuba.com/taglibs/filetag</taglib-uri>
+			<taglib-location>/WEB-INF/fileprocess.tld</taglib-location>
+		</taglib>
+		<taglib>
+			<taglib-uri>http://www.pinhuba.com/taglibs/buttontag</taglib-uri>
+			<taglib-location>/WEB-INF/button.tld</taglib-location>
+		</taglib>
+
+		<taglib>
+			<taglib-uri>http://www.pinhuba.com/taglibs/tabletag</taglib-uri>
+			<taglib-location>/WEB-INF/table.tld</taglib-location>
+		</taglib>
+		<jsp-property-group>
+        	<url-pattern>*.jsp</url-pattern>
+        	<trim-directive-whitespaces>true</trim-directive-whitespaces>
+      	</jsp-property-group>
+	</jsp-config>
+</web-app>

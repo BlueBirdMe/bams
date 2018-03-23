@@ -1,0 +1,27 @@
+#split_l{
+	width:170px;
+	vertical-align:top;
+}
+
+#split_c{
+	width:7px;
+}
+
+#split_c .cd {
+	width: 100%;
+	height: 100%;
+	background: #D2DAE5;
+	cursor: pointer;
+	position: relative;
+    cursor: e-resize;
+    cursor: col-resize;
+}
+
+#split_c .cb {
+	height: 51px;
+	width: 100%;
+	position: absolute;
+	top: 40%;
+	left: 0px;
+	background: url(split-buttons.png) -1px 0px no-repeat;
+}

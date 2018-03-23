@@ -1,0 +1,163 @@
+@CHARSET "UTF-8";
+
+DIV.dragLayer {
+	border-left: 1px solid #B7B6B6;
+	border-top: 1px solid #B7B6B6;
+	border-right: 1px solid #B7B6B6;
+	border-bottom: 1px solid #B7B6B6;
+	background-color: #fff;
+	margin:5px;
+}
+
+DIV.dragLayer_over {
+	border: 1px solid #F3DF51;
+	background-color: #ffffff;
+	filter: alpha(opacity =50);
+	-moz-opacity: 0.5; /* Moz + FF */
+	opacity: 0.5; /* 支持CSS3的浏览器（FF 1.5也支持）*/
+}
+
+DIV.clone_dragLayer_over {
+	border: 1px dashed #A6D0E8;
+	background-color: #ffffff;
+	filter: alpha(opacity = 40);
+	-moz-opacity: 0.4; /* Moz + FF */
+	opacity: 0.4; /* 支持CSS3的浏览器（FF 1.5也支持）*/
+	margin-bottom: 10px;
+}
+
+DIV.dragHeader {
+	width: 100%;
+	height: 20px;
+	line-height: 20px;
+	background-image: url('desktop.jpg');
+    font-weight:bold;
+	color: #696969;
+	cursor: move;
+}
+DIV.dragleft{
+	float: left;
+	width:150px;
+	text-indent: 24px;
+	font-family:微软雅黑;
+	height: 20px;
+	line-height: 20px;
+}
+DIV.dragHeader2 {
+	width: 100%;
+	height: 20px;
+	line-height: 20px;
+	background-image: url('desktop_title_bg.gif');
+	font-weight:   bold;
+	color: #2B67AB;
+}
+
+DIV.dragHeader_over {
+	width: 100%;
+	height: 20px;
+	line-height: 20px;
+	background-color: #FDE318;
+}
+
+SPAN.min {
+	cursor: pointer;
+	padding-right:3px;
+}
+
+.more {
+	width:52px;
+	padding-left:52px;
+	cursor: pointer;
+	background: url('move_more_.gif') center left no-repeat;
+}
+
+SPAN.add {
+	cursor: pointer;
+	padding-right:3px;
+	font-family: Arial;
+	font-size: 18px
+}
+
+
+#container {
+	margin: 0px
+}
+
+#container2 {
+	margin: 0px
+}
+.leftcontainer {
+	float: left;
+	width: 45%;
+	border: 0px solid #A6D0E8;
+	height: 100%;
+}
+
+.rightcontainer {
+	text-align:center;
+	width: 100%;
+	border: 0px solid #A6D0E8;
+	height: 100%;
+}
+
+.middlecontainer {
+	float: right;
+	width: 55%;
+	border: 0px solid #A6D0E8;
+	height: 100%;
+}
+
+.middlecontainer div {
+	margin-left: auto;
+	margin-right: auto;
+}
+DIV.content {
+	width: 100%;
+	padding-top:5px;
+	padding-bottom:5px;
+	text-align:center;
+}
+
+DIV.content ul{
+	padding: 0px;
+}
+
+.ulcss{
+	margin-left:3px;
+	margin-right:5px;
+	line-height:24px;
+	margin-top:3px;
+	margin-bottom:2px;
+}
+.ullicss{
+	border-bottom:1px dotted #B0AFAF;
+	overflow:hidden;
+	white-space:nowrap;
+	text-overflow:ellipsis;
+	width:99%;
+	padding:3px;	
+	text-align:left;
+	list-style:none;
+	min-height:20px;
+}
+
+.ullicss2{
+	border-bottom:1px dotted #B0AFAF;
+	overflow:hidden;
+	white-space:nowrap;
+	text-overflow:ellipsis;
+	width:220;
+	padding:3px;	
+	text-align:left;
+	list-style:none;
+	min-height:20px;
+}
+
+.lia{
+	color: #555555;
+	text-decoration:none;
+}
+.lia:hover {
+	color: #2366FF;
+	text-decoration:underline;
+}

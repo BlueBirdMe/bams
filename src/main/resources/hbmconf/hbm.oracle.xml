@@ -1,0 +1,3408 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="com.pinhuba.core.pojo"
+	default-lazy="true" default-cascade="save-update,merge,persist">
+	<class name="com.pinhuba.core.pojo.OaNotebook" table="OA_NOTEBOOK">
+		<id name="primaryKey" type="long">
+			<column name="OA_NOTEBOOK_ID" />
+			<generator class="sequence">
+				<param name="sequence">OA_NOTEBOOK_ID</param>
+			</generator>
+		</id>
+		<property name="oaNotebookContext" type="java.lang.String">
+			<column name="OA_NOTEBOOK_CONTEXT" />
+		</property>
+		<property name="oaNotebookCreattime" type="java.lang.String">
+			<column name="OA_NOTEBOOK_CREATTIME" />
+		</property>
+		<property name="oaNotebookEmp" type="java.lang.String">
+			<column name="OA_NOTEBOOK_EMP" />
+		</property>
+		<property name="companyId" type="java.lang.Integer">
+			<column name="COMPANY_ID" />
+		</property>
+	</class>
+	<class name="com.pinhuba.core.pojo.HrmWorkarea" table="HRM_WORKAREA">
+		<id name="primaryKey" type="long">
+			<column name="HRM_AREA_ID" />
+			<generator class="sequence">
+				<param name="sequence">HRM_AREA_ID</param>
+			</generator>
+		</id>
+		<property name="hrmAreaName" type="java.lang.String">
+			<column name="HRM_AREA_NAME" />
+		</property>
+		<property name="hrmAreaEngname" type="java.lang.String">
+			<column name="HRM_AREA_ENGNAME" />
+		</property>
+		<property name="hrmAreaDesc" type="java.lang.String">
+			<column name="HRM_AREA_DESC" />
+		</property>
+		<property name="recordId" type="java.lang.String">
+			<column name="RECORD_ID" />
+		</property>
+		<property name="recordDate" type="java.lang.String">
+			<column name="RECORD_DATE" />
+		</property>
+		<property name="lastmodiId" type="java.lang.String">
+			<column name="LASTMODI_ID" />
+		</property>
+		<property name="lastmodiDate" type="java.lang.String">
+			<column name="LASTMODI_DATE" />
+		</property>
+		<property name="companyId" type="java.lang.Integer">
+			<column name="COMPANY_ID" />
+		</property>
+	</class>
+
+	<class name="com.pinhuba.core.pojo.SysAttachmentInfo" table="SYS_ATTACHMENT_INFO">
+		<id name="primaryKey" type="long">
+			<column name="ATTACHMENT_ID" />
+			<generator class="sequence">
+				<param name="sequence">SYS_ATTACHMENT_ID</param>
+			</generator>
+		</id>
+		<property name="attachmentFilename" type="java.lang.String">
+			<column name="ATTACHMENT_FILENAME" />
+		</property>
+		<property name="attachmentName" type="java.lang.String">
+			<column name="ATTACHMENT_NAME" />
+		</property>
+		<property name="attachmentRename" type="java.lang.String">
+			<column name="ATTACHMENT_RENAME" />
+		</property>
+		<property name="attachmentDescription" type="java.lang.String">
+			<column name="ATTACHMENT_DESCRIPTION" />
+		</property>
+		<property name="attachmentRemark" type="java.lang.String">
+			<column name="ATTACHMENT_REMARK" />
+		</property>
+		<property name="recordId" type="java.lang.String">
+			<column name="RECORD_ID" />
+		</property>
+		<property name="recordDate" type="java.lang.String">
+			<column name="RECORD_DATE" />
+		</property>
+		<property name="lastmodiId" type="java.lang.String">
+			<column name="LASTMODI_ID" />
+		</property>
+		<property name="lastmodiDate" type="java.lang.String">
+			<column name="LASTMODI_DATE" />
+		</property>
+		<property name="companyId" type="java.lang.Integer">
+			<column name="COMPANY_ID" />
+		</property>
+	</class>
+	<class name="com.pinhuba.core.pojo.SysMethodInfo" table="SYS_METHOD_INFO">
+		<id name="primaryKey" type="java.lang.String">
+			<column name="METHOD_INFO_ID" />
+		</id>
+		<property name="methodInfoName" type="java.lang.String">
+			<column name="METHOD_INFO_NAME" />
+		</property>
+		<property name="methodInfoEngname" type="java.lang.String">
+			<column name="METHOD_INFO_ENGNAME" />
+		</property>
+		<property name="methodUri" type="java.lang.String">
+			<column name="METHOD_URI" />
+		</property>
+		<property name="methodNo" type="java.lang.Integer">
+			<column name="METHOD_NO" />
+		</property>
+		<property name="imageSrc" type="java.lang.String">
+			<column name="IMAGE_SRC" />
+		</property>
+		<property name="methodLevel" type="java.lang.Integer">
+			<column name="METHOD_LEVEL" />
+		</property>
+		<property name="levelUnit" type="java.lang.String">
+			<column name="LEVEL_UNIT" />
+		</property>
+		<property name="isAction" type="java.lang.Integer">
+			<column name="IS_ACTION" />
+		</property>
+		<property name="methodSign" type="java.lang.String">
+			<column name="METHOD_SIGN" />
+		</property>
+		<property name="isDefault" type="java.lang.Integer">
+			<column name="IS_DEFAULT" />
+		</property>
+		<property name="defaultPage" type="java.lang.String">
+			<column name="DEFAULT_PAGE" />
+		</property>
+		<property name="methodMsg" type="java.lang.String">
+			<column name="METHOD_MSG" />
+		</property>
+		<property name="methodPages" type="java.lang.String">
+			<column name="METHOD_PAGES" />
+		</property>
+	</class>
+	<class name="com.pinhuba.core.pojo.SysMethodHelp" table="SYS_METHOD_HELP">
+		<id name="primaryKey" type="long">
+			<column name="HELP_ID" />
+			<generator class="sequence">
+				<param name="sequence">SYS_METHOD_HELP_ID</param>
+			</generator>
+		</id>
+		<property name="helpImg" type="java.lang.String">
+			<column name="HELP_IMG" />
+		</property>
+		<property name="helpDesc" type="java.lang.String">
+			<column name="HELP_DESC" />
+		</property>
+		<property name="methodId" type="java.lang.String">
+			<column name="METHOD_ID" />
+		</property>
+		<property name="priority" type="java.lang.Integer">
+	        <column name="PRIORITY"/>
+	    </property>
+	</class>
+	
+	<class name="com.pinhuba.core.pojo.SysMethodBtn" table="sys_method_btn" >
+	    <id name="primaryKey" type="long">
+	        <column name="btn_id" />
+	        <generator class="sequence">
+				<param name="sequence">SYS_METHOD_BTN_ID</param>
+			</generator>
+	    </id>
+	    <property name="btnName" type="java.lang.String">
+			<column name="btn_name"/>
+		</property>
+		<property name="btnImg" type="java.lang.String">
+			<column name="btn_img"/>
+		</property>
+		<property name="btnFun" type="java.lang.String">
+			<column name="btn_fun"/>
+		</property>
+		<property name="btnDesc" type="java.lang.String">
+			<column name="btn_desc"/>
+		</property>
+		<property name="methodId" type="java.lang.String">
+	        <column name="method_id"/>
+	    </property>
+	    <property name="priority" type="java.lang.Integer">
+	        <column name="priority"/>
+	    </property>
+	</class>
+	
+	<class name="com.pinhuba.core.pojo.SysCompanyMethods" table="SYS_COMPANY_METHODS">
+		<id name="primaryKey" type="long">
+			<column name="COMPANY_METHOD_ID" />
+			<generator class="sequence">
+				<param name="sequence">SYS_COMPANY_METHOD_ID</param>
+			</generator>
+		</id>
+		<property name="methodInfoId" type="java.lang.String">
+			<column name="METHOD_INFO_ID" />
+		</property>
+		<property name="companyId" type="java.lang.Integer">
+			<column name="COMPANY_ID" />
+		</property>
+	</class>
+	<class name="com.pinhuba.core.pojo.SysMsg" table="SYS_MSG">
+		<id name="primaryKey" type="long">
+			<column name="MSG_ID" />
+			<generator class="sequence">
+				<param name="sequence">SYS_MSG_ID</param>
+			</generator>
+		</id>
+		<property name="msgTitle" type="java.lang.String">
+			<column name="MSG_TITLE" />
+		</property>
+		<property name="msgContext" type="java.lang.String" >
+			<column name="MSG_CONTEXT" />
+		</property>
+		<property name="msgDate" type="java.lang.String">
+			<column name="MSG_DATE" />
+		</property>
+		<property name="msgVsdate" type="java.lang.String">
+			<column name="MSG_VSDATE" />
+		</property>
+		<property name="msgVedate" type="java.lang.String">
+			<column name="MSG_VEDATE" />
+		</property>
+		<property name="msgPerson" type="java.lang.String">
+			<column name="MSG_PERSON" />
+		</property>
+	</class>
+	<class name="com.pinhuba.core.pojo.SysHelp" table="SYS_HELP">
+		<id name="primaryKey" type="long">
+			<column name="HELP_ID" />
+			<generator class="sequence">
+				<param name="sequence">SYS_HELP_ID</param>
+			</generator>
+		</id>
+		<property name="helpKeyword" type="java.lang.String">
+			<column name="HELP_KEYWORD" />
+		</property>
+		<property name="helpTitle" type="java.lang.String">
+			<column name="HELP_TITLE" />
+		</property>
+		<property name="helpContext" type="java.lang.String" >
+			<column name="HELP_CONTEXT" />
+		</property>
+		<property name="helpDate" type="java.lang.String">
+			<column name="HELP_DATE" />
+		</property>
+		<property name="methodCode" type="java.lang.String">
+			<column name="METHOD_CODE" />
+		</property>
+		<property name="findSign" type="java.lang.String">
+			<column name="FIND_SIGN" />
+		</property>
+	</class>
+	<class name="com.pinhuba.core.pojo.SysLog" table="SYS_LOG">
+		<id name="primaryKey" type="long">
+			<column name="LOG_ID" />
+			<generator class="sequence">
+				<param name="sequence">SYS_LOG_ID</param>
+			</generator>
+		</id>
+		<property name="userId" type="java.lang.Integer">
+			<column name="USER_ID" />
+		</property>
+		<property name="logDate" type="java.lang.String">
+			<column name="LOG_DATE" />
+		</property>
+		<property name="logDetail" type="java.lang.String">
+			<column name="LOG_DETAIL" />
+		</property>
+		<property name="companyId" type="java.lang.Integer">
+			<column name="COMPANY_ID" />
+		</property>
+		<property name="requestAddr" type="java.lang.String">
+			<column name="REQUEST_ADDR" />
+		</property>
+	</class>
+	
+	<class name="com.pinhuba.core.pojo.SysLogRuntime" table="SYS_LOG_RUNTIME" >
+	    <id name="primaryKey" type="long">
+	        <column name="ID" />
+	        <generator class="sequence">
+				<param name="sequence">SYS_LOG_RUNTIME_ID</param>
+			</generator>
+	    </id>
+	    <property name="className" type="java.lang.String">
+	        <column name="CLASS_NAME"/>
+	    </property>
+	    <property name="methodName" type="java.lang.String">
+	        <column name="METHOD_NAME"/>
+	    </property>
+	    <property name="createTime" type="java.lang.String">
+	        <column name="CREATE_TIME"/>
+	    </property>
+	    <property name="logLevel" type="java.lang.String">
+	        <column name="LOG_LEVEL"/>
+	    </property>
+	    <property name="msg" type="java.lang.String">
+	        <column name="MSG"/>
+	    </property>
+	</class>
+	
+	<class name="com.pinhuba.core.pojo.SysException" table="SYS_EXCEPTION">
+		<id name="primaryKey" type="long">
+			<column name="EXCEPTION_ID" />
+			<generator class="sequence">
+				<param name="sequence">SYS_EXCEPTION_ID</param>
+			</generator>
+		</id>
+		<property name="userId" type="java.lang.Integer">
+			<column name="USER_ID" />
+		</property>
+		<property name="companyId" type="java.lang.Integer">
+			<column name="COMPANY_ID" />
+		</property>
+		<property name="exceptionDate" type="java.lang.String">
+			<column name="EXCEPTION_DATE" />
+		</property>
+		<property name="exceptionMsg" type="java.lang.String" >
+			<column name="EXCEPTION_MSG" />
+		</property>
+		<property name="exceptionClass" type="java.lang.String">
+			<column name="EXCEPTION_CLASS" />
+		</property>
+		<property name="exceptionContext" type="java.lang.String" >
+			<column name="EXCEPTION_CONTEXT" />
+		</property>
+		<property name="processName" type="java.lang.String">
+			<column name="PROCESS_NAME" />
+		</property>
+		<property name="processDate" type="java.lang.String">
+			<column name="PROCESS_DATE" />
+		</property>
+		<property name="processContext" type="java.lang.String" >
+			<column name="PROCESS_CONTEXT" />
+		</property>
+		<property name="exceptionStatus" type="java.lang.Integer">
+			<column name="EXCEPTION_STATUS" />
+		</property>
+	</class>
+	<class name="com.pinhuba.core.pojo.SysUserInfo" table="SYS_USER_INFO">
+		<id name="primaryKey" type="long">
+			<column name="USER_ID" />
+			<generator class="sequence">
+				<param name="sequence">SYS_USER_ID</param>
+			</generator>
+		</id>
+		<property name="hrmEmployeeId" type="java.lang.String">
+			<column name="HRM_EMPLOYEE_ID" />
+		</property>
+		<property name="userName" type="java.lang.String">
+			<column name="USER_NAME" />
+		</property>
+		<property name="userpassword" type="java.lang.String">
+			<column name="USERPASSWORD" />
+		</property>
+		<property name="userAction" type="java.lang.Integer">
+			<column name="USER_ACTION" />
+		</property>
+		<property name="recordId" type="java.lang.String">
+			<column name="RECORD_ID" />
+		</property>
+		<property name="recordDate" type="java.lang.String">
+			<column name="RECORD_DATE" />
+		</property>
+		<property name="lastmodiId" type="java.lang.String">
+			<column name="LASTMODI_ID" />
+		</property>
+		<property name="lastmodiDate" type="java.lang.String">
+			<column name="LASTMODI_DATE" />
+		</property>
+		<property name="companyId" type="java.lang.Integer">
+			<column name="COMPANY_ID" />
+		</property>
+		<property name="userType" type="java.lang.Integer">
+			<column name="USER_TYPE" />
+		</property>
+	</class>
+	<class name="com.pinhuba.core.pojo.SysColumnControl" table="SYS_COLUMN_CONTROL">
+		<id name="primaryKey" type="long">
+			<column name="COLUMN_CONTROL_ID" />
+			<generator class="sequence">
+				<param name="sequence">SYS_COLUMN_CONTROL_ID</param>
+			</generator>
+		</id>
+		<property name="columnCode" type="java.lang.String">
+			<column name="COLUMN_CODE" />
+		</property>
+		<property name="columnName" type="java.lang.String">
+			<column name="COLUMN_NAME" />
+		</property>
+		<property name="isShow" type="java.lang.Integer">
+			<column name="IS_SHOW" />
+		</property>
+		<property name="tableName" type="java.lang.String">
+			<column name="TABLE_NAME" />
+		</property>
+		<property name="isshowSimple" type="java.lang.Integer">
+			<column name="ISSHOW_SIMPLE" />
+		</property>
+		<property name="isshowAdvanced" type="java.lang.Integer">
+			<column name="ISSHOW_ADVANCED" />
+		</property>
+		<property name="columnStrcount" type="java.lang.Integer">
+			<column name="COLUMN_STRCOUNT" />
+		</property>
+		<property name="priority" type="java.lang.Integer">
+			<column name="PRIORITY" />
+		</property>
+	</class>
+	<class name="com.pinhuba.core.pojo.SysImageInfo" table="SYS_IMAGE_INFO">
+		<id name="primaryKey" type="long">
+			<column name="IMAGE_INFO_ID" />
+			<generator class="sequence">
+				<param name="sequence">SYS_IMAGE_INFO_ID</param>
+			</generator>
+		</id>
+		<property name="imageInfoFilename" type="java.lang.String">
+			<column name="IMAGE_INFO_FILENAME" />
+		</property>
+		<property name="imageInfoFilePath" type="java.lang.String">
+			<column name="IMAGE_INFO_FILEPATH" />
+		</property>
+		<property name="imageInfoName" type="java.lang.String">
+			<column name="IMAGE_INFO_NAME" />
+		</property>
+		<property name="imageInfoRename" type="java.lang.String">
+			<column name="IMAGE_INFO_RENAME" />
+		</property>
+		<property name="imageInfoDescription" type="java.lang.String">
+			<column name="IMAGE_INFO_DESCRIPTION" />
+		</property>
+		<property name="imageInfoRemark" type="java.lang.String">
+			<column name="IMAGE_INFO_REMARK" />
+		</property>
+		<property name="recordId" type="java.lang.String">
+			<column name="RECORD_ID" />
+		</property>
+		<property name="recordDate" type="java.lang.String">
+			<column name="RECORD_DATE" />
+		</property>
+		<property name="lastmodiId" type="java.lang.String">
+			<column name="LASTMODI_ID" />
+		</property>
+		<property name="lastmodiDate" type="java.lang.String">
+			<column name="LASTMODI_DATE" />
+		</property>
+		<property name="companyId" type="java.lang.Integer">
+			<column name="COMPANY_ID" />
+		</property>
+	</class>
+	<class name="com.pinhuba.core.pojo.HrmPost" table="HRM_POST">
+		<id name="primaryKey" type="long">
+			<column name="POST_ID" />
+			<generator class="sequence">
+				<param name="sequence">HRM_POST_ID</param>
+			</generator>
+		</id>
+		<property name="hrmPostId" type="java.lang.String">
+			<column name="HRM_POST_ID" />
+		</property>
+		<property name="hrmPostName" type="java.lang.String">
+			<column name="HRM_POST_NAME" />
+		</property>
+		<property name="hrmPostEngname" type="java.lang.String">
+			<column name="HRM_POST_ENGNAME" />
+		</property>
+		<property name="hrmPostUpid" type="java.lang.String">
+			<column name="HRM_POST_UPID" />
+		</property>
+		<property name="hrmPostMang" type="java.lang.String">
+			<column name="HRM_POST_MANG" />
+		</property>
+		<property name="hrmPostDesc" type="java.lang.String">
+			<column name="HRM_POST_DESC" />
+		</property>
+		<property name="recordId" type="java.lang.String">
+			<column name="RECORD_ID" />
+		</property>
+		<property name="recordDate" type="java.lang.String">
+			<column name="RECORD_DATE" />
+		</property>
+		<property name="lastmodiId" type="java.lang.String">
+			<column name="LASTMODI_ID" />
+		</property>
+		<property name="lastmodiDate" type="java.lang.String">
+			<column name="LASTMODI_DATE" />
+		</property>
+		<property name="companyId" type="java.lang.Integer">
+			<column name="COMPANY_ID" />
+		</property>
+		<property name="hrmPostShowRow" type="java.lang.Integer">
+			<column name="HRM_POST_SHOWROW" />
+		</property>
+	</class>
+	<class name="com.pinhuba.core.pojo.HrmEmployee" table="HRM_EMPLOYEE">
+		<id name="primaryKey" type="java.lang.String">
+			<column name="HRM_EMPLOYEE_ID" />
+		</id>
+		<property name="hrmEmployeeName" type="java.lang.String">
+			<column name="HRM_EMPLOYEE_NAME" />
+		</property>
+		<property name="hrmEmployeeEngname" type="java.lang.String">
+			<column name="HRM_EMPLOYEE_ENGNAME" />
+		</property>
+		<property name="hrmEmployeeSimple" type="java.lang.String">
+			<column name="HRM_EMPLOYEE_SIMPLE" />
+		</property>
+		<property name="hrmEmployeeCode" type="java.lang.String">
+			<column name="HRM_EMPLOYEE_CODE" />
+		</property>
+		<property name="hrmEmployeePatternId" type="java.lang.String">
+			<column name="HRM_EMPLOYEE_PATTERN_ID" />
+		</property>
+		<property name="hrmEmployeeBirthday" type="java.lang.String">
+			<column name="HRM_EMPLOYEE_BIRTHDAY" />
+		</property>
+		<property name="hrmEmployeeSex" type="java.lang.String">
+			<column name="HRM_EMPLOYEE_SEX" />
+		</property>
+		<property name="hrmEmployeeMarriage" type="java.lang.String">
+			<column name="HRM_EMPLOYEE_MARRIAGE" />
+		</property>
+		<property name="hrmEmployeePolitics" type="java.lang.String">
+			<column name="HRM_EMPLOYEE_POLITICS" />
+		</property>
+		<property name="hrmEmployeeNationality" type="java.lang.String">
+			<column name="HRM_EMPLOYEE_NATIONALITY" />
+		</property>
+		<property name="hrmEmployeeBloodType" type="java.lang.String">
+			<column name="HRM_EMPLOYEE_BLOOD_TYPE" />
+		</property>
+		<property name="hrmEmployeeHeight" type="java.lang.String">
+			<column name="HRM_EMPLOYEE_HEIGHT" />
+		</property>
+		<property name="hrmEmployeeWeight" type="java.lang.String">
+			<column name="HRM_EMPLOYEE_WEIGHT" />
+		</property>
+		<property name="hrmEmployeeImageInfoId" type="java.lang.Integer">
+			<column name="HRM_EMPLOYEE_IMAGE_INFO_ID" />
+		</property>
+		<property name="hrmEmployeeSchool" type="java.lang.String">
+			<column name="HRM_EMPLOYEE_SCHOOL" />
+		</property>
+		<property name="hrmEmployeeProfessional" type="java.lang.String">
+			<column name="HRM_EMPLOYEE_PROFESSIONAL" />
+		</property>
+		<property name="hrmEmployeeDegree" type="java.lang.String">
+			<column name="HRM_EMPLOYEE_DEGREE" />
+		</property>
+		<property name="hrmEmployeeIdentitycard" type="java.lang.String">
+			<column name="HRM_EMPLOYEE_IDENTITYCARD" />
+		</property>
+		<property name="hrmEmployeeHometown" type="java.lang.String">
+			<column name="HRM_EMPLOYEE_HOMETOWN" />
+		</property>
+		<property name="hrmEmployeeHousePhone" type="java.lang.String">
+			<column name="HRM_EMPLOYEE_HOUSE_PHONE" />
+		</property>
+		<property name="hrmEmployeeHouseAddress" type="java.lang.String">
+			<column name="HRM_EMPLOYEE_HOUSE_ADDRESS" />
+		</property>
+		<property name="hrmEmployeeMobileTele" type="java.lang.String">
+			<column name="HRM_EMPLOYEE_MOBILE_TELE" />
+		</property>
+		<property name="hrmEmployeeWorkTele" type="java.lang.String">
+			<column name="HRM_EMPLOYEE_WORK_TELE" />
+		</property>
+		<property name="hrmEmployeeInTime" type="java.lang.String">
+			<column name="HRM_EMPLOYEE_IN_TIME" />
+		</property>
+		<property name="hrmEmployeeDepid" type="java.lang.Integer">
+			<column name="HRM_EMPLOYEE_DEPID" />
+		</property>
+		<property name="hrmEmployeeWorkareaid" type="java.lang.Integer">
+			<column name="HRM_EMPLOYEE_WORKAREAID" />
+		</property>
+		<property name="hrmEmployeePostId" type="java.lang.Integer">
+			<column name="HRM_EMPLOYEE_POST_ID" />
+		</property>
+		<property name="hrmEmployeeSquadId" type="java.lang.Integer">
+			<column name="HRM_EMPLOYEE_SQUAD_ID" />
+		</property>
+		<property name="hrmEmployeeEmail" type="java.lang.String">
+			<column name="HRM_EMPLOYEE_EMAIL" />
+		</property>
+		<property name="hrmEmployeeUrgentPreson" type="java.lang.String">
+			<column name="HRM_EMPLOYEE_URGENT_PRESON" />
+		</property>
+		<property name="hrmEmployeeUrgentPhone" type="java.lang.String">
+			<column name="HRM_EMPLOYEE_URGENT_PHONE" />
+		</property>
+		<property name="hrmEmployeeAdderss" type="java.lang.String">
+			<column name="HRM_EMPLOYEE_ADDERSS" />
+		</property>
+		<property name="hrmEmployeeAppendid" type="java.lang.String" >
+			<column name="HRM_EMPLOYEE_APPENDID" />
+		</property>
+		<property name="recordId" type="java.lang.String">
+			<column name="RECORD_ID" />
+		</property>
+		<property name="recordDate" type="java.lang.String">
+			<column name="RECORD_DATE" />
+		</property>
+		<property name="lastmodiId" type="java.lang.String">
+			<column name="LASTMODI_ID" />
+		</property>
+		<property name="lastmodiDate" type="java.lang.String">
+			<column name="LASTMODI_DATE" />
+		</property>
+		<property name="companyId" type="java.lang.Integer">
+			<column name="COMPANY_ID" />
+		</property>
+		<property name="hrmEmployeeWorkTime" type="java.lang.String">
+			<column name="HRM_EMPLOYEE_WORK_TIME" />
+		</property>
+		<property name="hrmPartPost" type="java.lang.String">
+			<column name="HRM_PART_POST" />
+		</property>
+		<property name="hrmEmployeeStatus" type="java.lang.Integer">
+			<column name="HRM_EMPLOYEE_STATUS" />
+		</property>
+		<property name="hrmOtherAttachmen" type="java.lang.String">
+			<column name="HRM_OTHER_ATTACHMEN" />
+		</property>
+		<property name="hrmEmployeeActive" type="java.lang.Integer">
+			<column name="HRM_EMPLOYEE_ACTIVE" />
+		</property>
+	</class>
+	<class name="com.pinhuba.core.pojo.SysCompanyInfo" table="SYS_COMPANY_INFO">
+		<id name="primaryKey" type="long">
+			<column name="COMPANY_INFO_ID" />
+			<generator class="sequence">
+				<param name="sequence">SYS_COMPANY_INFO_ID</param>
+			</generator>
+		</id>
+		<property name="provinceCode" type="java.lang.String">
+			<column name="PROVINCE_CODE" />
+		</property>
+		<property name="districtCode" type="java.lang.String">
+			<column name="DISTRICT_CODE" />
+		</property>
+		<property name="companyArea" type="java.lang.String">
+			<column name="COMPANY_AREA" />
+		</property>
+		<property name="companyInfoName" type="java.lang.String">
+			<column name="COMPANY_INFO_NAME" />
+		</property>
+		<property name="companyInfoShortname" type="java.lang.String">
+			<column name="COMPANY_INFO_SHORTNAME" />
+		</property>
+		<property name="companyInfoAdder" type="java.lang.String">
+			<column name="COMPANY_INFO_ADDER" />
+		</property>
+		<property name="companyInfoPost" type="java.lang.String">
+			<column name="COMPANY_INFO_POST" />
+		</property>
+		<property name="companyInfoEmployee" type="java.lang.String">
+			<column name="COMPANY_INFO_EMPLOYEE" />
+		</property>
+		<property name="companyInfoEmployeePosition" type="java.lang.String">
+			<column name="COMPANY_INFO_EMPLOYEE_POSITION" />
+		</property>
+		<property name="companyInfoEmail" type="java.lang.String">
+			<column name="COMPANY_INFO_EMAIL" />
+		</property>
+		<property name="companyInfoPhone" type="java.lang.String">
+			<column name="COMPANY_INFO_PHONE" />
+		</property>
+		<property name="companyInfoFax" type="java.lang.String">
+			<column name="COMPANY_INFO_FAX" />
+		</property>
+		<property name="companyInfoStatus" type="java.lang.Integer">
+			<column name="COMPANY_INFO_STATUS" />
+		</property>
+		<property name="companyInfoType" type="java.lang.Integer">
+			<column name="COMPANY_INFO_TYPE" />
+		</property>
+		<property name="companyInfoCode" type="java.lang.String">
+			<column name="COMPANY_INFO_CODE" />
+		</property>
+		<property name="companyInfoSdate" type="java.lang.String">
+			<column name="COMPANY_INFO_SDATE" />
+		</property>
+		<property name="companyInfoEdate" type="java.lang.String">
+			<column name="COMPANY_INFO_EDATE" />
+		</property>
+		<property name="companyInfoUsercount" type="java.lang.Integer">
+			<column name="COMPANY_INFO_USERCOUNT" />
+		</property>
+		<property name="companyInfoWarehousecount" type="java.lang.Integer">
+			<column name="COMPANY_INFO_WAREHOUSECOUNT" />
+		</property>
+		<property name="companyInfoContext" type="java.lang.String" >
+			<column name="COMPANY_INFO_CONTEXT" />
+		</property>
+		<property name="companyInfoRegDate" type="java.lang.String">
+			<column name="COMPANY_INFO_REGDATE" />
+		</property>
+		<property name="companyInfoLastDate" type="java.lang.String">
+			<column name="COMPANY_INFO_LASTDATE" />
+		</property>
+		<property name="companyInfoLogin" type="java.lang.Integer">
+			<column name="COMPANY_INFO_LOGIN" />
+		</property>
+		<property name="companyInfoTitle" type="java.lang.String">
+			<column name="COMPANY_INFO_TITLE" />
+		</property>
+		<property name="companyInfoEnTitle" type="java.lang.String">
+			<column name="COMPANY_INFO_ENTITLE" />
+		</property>
+	</class>
+	<class name="com.pinhuba.core.pojo.SysUserMethods" table="SYS_USER_METHODS">
+		<id name="primaryKey" type="long">
+			<column name="USER_METHOD_ID" />
+			<generator class="sequence">
+				<param name="sequence">SYS_USER_METHOD_ID</param>
+			</generator>
+		</id>
+		<property name="userId" type="java.lang.Integer">
+			<column name="USER_ID" />
+		</property>
+		<property name="userMethodDetail" type="java.lang.String" >
+			<column name="USER_METHOD_DETAIL" />
+		</property>
+		<property name="companyId" type="java.lang.Integer">
+			<column name="COMPANY_ID" />
+		</property>
+	</class>
+	
+	<class name="com.pinhuba.core.pojo.SysUserBtns" table="SYS_USER_BTNS">
+		<id name="primaryKey" type="long">
+			<column name="USER_BTN_ID" />
+			<generator class="sequence">
+				<param name="sequence">SYS_USER_BTN_ID</param>
+			</generator>
+		</id>
+		<property name="userId" type="java.lang.Integer">
+			<column name="USER_ID" />
+		</property>
+		<property name="userBtnDetail" type="java.lang.String">
+			<column name="USER_BTN_DETAIL" />
+		</property>
+		<property name="companyId" type="java.lang.Integer">
+			<column name="COMPANY_ID" />
+		</property>
+	</class>
+	
+	<class name="com.pinhuba.core.pojo.SysUserGroup" table="SYS_USER_GROUP">
+		<id name="primaryKey" type="long">
+			<column name="GROUP_ID" />
+			<generator class="sequence">
+				<param name="sequence">SYS_GROUP_ID</param>
+			</generator>
+		</id>
+		<property name="groupName" type="java.lang.String">
+			<column name="GROUP_NAME" />
+		</property>
+		<property name="groupDecp" type="java.lang.String">
+			<column name="GROUP_DECP" />
+		</property>
+		<property name="recordId" type="java.lang.String">
+			<column name="RECORD_ID" />
+		</property>
+		<property name="recordDate" type="java.lang.String">
+			<column name="RECORD_DATE" />
+		</property>
+		<property name="lastmodiId" type="java.lang.String">
+			<column name="LASTMODI_ID" />
+		</property>
+		<property name="lastmodeDate" type="java.lang.String">
+			<column name="LASTMODE_DATE" />
+		</property>
+		<property name="companyId" type="java.lang.Integer">
+			<column name="COMPANY_ID" />
+		</property>
+	</class>
+	<class name="com.pinhuba.core.pojo.SysUserGroupDetail" table="SYS_USER_GROUP_DETAIL">
+		<id name="primaryKey" type="long">
+			<column name="GROUP_DETAIL_ID" />
+			<generator class="sequence">
+				<param name="sequence">SYS_GROUP_DETAIL_ID</param>
+			</generator>
+		</id>
+		<property name="userId" type="java.lang.Integer">
+			<column name="USER_ID" />
+		</property>
+		<property name="groupId" type="java.lang.Integer">
+			<column name="GROUP_ID" />
+		</property>
+		<property name="companyId" type="java.lang.Integer">
+			<column name="COMPANY_ID" />
+		</property>
+	</class>
+	<class name="com.pinhuba.core.pojo.SysRole" table="SYS_ROLE">
+		<id name="primaryKey" type="long">
+			<column name="ROLE_ID" />
+			<generator class="sequence">
+				<param name="sequence">SYS_ROLE_ID</param>
+			</generator>
+		</id>
+		<property name="roleName" type="java.lang.String">
+			<column name="ROLE_NAME" />
+		</property>
+		<property name="roleDesc" type="java.lang.String">
+			<column name="ROLE_DESC" />
+		</property>
+		<property name="recordId" type="java.lang.String">
+			<column name="RECORD_ID" />
+		</property>
+		<property name="recordDate" type="java.lang.String">
+			<column name="RECORD_DATE" />
+		</property>
+		<property name="lastmodiId" type="java.lang.String">
+			<column name="LASTMODI_ID" />
+		</property>
+		<property name="lastmodiDate" type="java.lang.String">
+			<column name="LASTMODI_DATE" />
+		</property>
+		<property name="companyId" type="java.lang.Integer">
+			<column name="COMPANY_ID" />
+		</property>
+	</class>
+	<class name="com.pinhuba.core.pojo.SysRoleDetail" table="SYS_ROLE_DETAIL">
+		<id name="primaryKey" type="long">
+			<column name="ROLE_DETAIL_ID" />
+			<generator class="sequence">
+				<param name="sequence">SYS_ROLE_DETAIL_ID</param>
+			</generator>
+		</id>
+		<property name="roleId" type="java.lang.Integer">
+			<column name="ROLE_ID" />
+		</property>
+		<property name="methodId" type="java.lang.String">
+			<column name="METHOD_ID" />
+		</property>
+		<property name="companyId" type="java.lang.Integer">
+			<column name="COMPANY_ID" />
+		</property>
+	</class>
+	
+	<class name="com.pinhuba.core.pojo.SysRoleBtn" table="SYS_ROLE_BTN">
+		<id name="primaryKey" type="long">
+			<column name="ROLE_BTN_ID" />
+			<generator class="sequence">
+				<param name="sequence">SYS_ROLE_BTN_ID</param>
+			</generator>
+		</id>
+		<property name="roleId" type="java.lang.Integer">
+			<column name="ROLE_ID" />
+		</property>
+		<property name="btnId" type="java.lang.Integer">
+			<column name="BTN_ID" />
+		</property>
+		<property name="companyId" type="java.lang.Integer">
+			<column name="COMPANY_ID" />
+		</property>
+	</class>
+	
+	<class name="com.pinhuba.core.pojo.SysRoleBind" table="SYS_ROLE_BIND">
+		<id name="primaryKey" type="long">
+			<column name="BIND_ID" />
+			<generator class="sequence">
+				<param name="sequence">SYS_BIND_ID</param>
+			</generator>
+		</id>
+		<property name="bindType" type="java.lang.Integer">
+			<column name="BIND_TYPE" />
+		</property>
+		<property name="roleId" type="java.lang.Integer">
+			<column name="ROLE_ID" />
+		</property>
+		<property name="companyId" type="java.lang.Integer">
+			<column name="COMPANY_ID" />
+		</property>
+		<property name="bindValue" type="java.lang.String">
+			<column name="BIND_VALUE" />
+		</property>
+	</class>
+	<class name="com.pinhuba.core.pojo.SysLibraryInfo" table="SYS_LIBRARY_INFO">
+		<id name="primaryKey" type="long">
+			<column name="LIBRARY_ID" />
+			<generator class="sequence">
+				<param name="sequence">SYS_LIBRARY_ID</param>
+			</generator>
+		</id>
+		<property name="libraryInfoCode" type="java.lang.String">
+			<column name="LIBRARY_INFO_CODE" />
+		</property>
+		<property name="libraryInfoName" type="java.lang.String">
+			<column name="LIBRARY_INFO_NAME" />
+		</property>
+		<property name="libraryInfoEngname" type="java.lang.String">
+			<column name="LIBRARY_INFO_ENGNAME" />
+		</property>
+		<property name="libraryInfoUpcode" type="java.lang.String">
+			<column name="LIBRARY_INFO_UPCODE" />
+		</property>
+		<property name="libraryInfoIsedit" type="java.lang.Integer">
+			<column name="LIBRARY_INFO_ISEDIT" />
+		</property>
+		<property name="libraryInfoIsvalid" type="java.lang.Integer">
+			<column name="LIBRARY_INFO_ISVALID" />
+		</property>
+		<property name="libraryInfoDesc" type="java.lang.String">
+			<column name="LIBRARY_INFO_DESC" />
+		</property>
+	</class>
+	<class name="com.pinhuba.core.pojo.SysLibraryStandard" table="SYS_LIBRARY_STANDARD">
+		<id name="primaryKey" type="long">
+			<column name="LIBRARY_ID" />
+			<generator class="sequence">
+				<param name="sequence">SYS_LIBRARY_STAND_ID</param>
+			</generator>
+		</id>
+		<property name="libraryCode" type="java.lang.String">
+			<column name="LIBRARY_CODE" />
+		</property>
+		<property name="libraryName" type="java.lang.String">
+			<column name="LIBRARY_NAME" />
+		</property>
+		<property name="libraryUpcode" type="java.lang.String">
+			<column name="LIBRARY_UPCODE" />
+		</property>
+		<property name="libraryStandCode" type="java.lang.Integer">
+			<column name="LIBRARY_STAND_CODE" />
+		</property>
+		<property name="libraryDesc" type="java.lang.String">
+			<column name="LIBRARY_DESC" />
+		</property>
+	</class>
+	
+	<class name="com.pinhuba.core.pojo.HrmDepartment" table="HRM_DEPARTMENT">
+		<id name="primaryKey" type="long">
+			<column name="DEP_ID" />
+			<generator class="sequence">
+				<param name="sequence">HRM_DEP_ID</param>
+			</generator>
+		</id>
+		<property name="hrmDepId" type="java.lang.String">
+			<column name="HRM_DEP_ID" />
+		</property>
+		<property name="hrmDepCode" type="java.lang.String">
+			<column name="HRM_DEP_CODE" />
+		</property>
+		<property name="hrmDepName" type="java.lang.String">
+			<column name="HRM_DEP_NAME" />
+		</property>
+		<property name="hrmDepEngname" type="java.lang.String">
+			<column name="HRM_DEP_ENGNAME" />
+		</property>
+		<property name="hrmDepUpid" type="java.lang.String">
+			<column name="HRM_DEP_UPID" />
+		</property>
+		<property name="hrmEmpId" type="java.lang.String">
+			<column name="HRM_EMP_ID" />
+		</property>
+		<property name="hrmDepDesc" type="java.lang.String">
+			<column name="HRM_DEP_DESC" />
+		</property>
+		<property name="recordId" type="java.lang.String">
+			<column name="RECORD_ID" />
+		</property>
+		<property name="recordDate" type="java.lang.String">
+			<column name="RECORD_DATE" />
+		</property>
+		<property name="lastmodiId" type="java.lang.String">
+			<column name="LASTMODI_ID" />
+		</property>
+		<property name="lastmodiDate" type="java.lang.String">
+			<column name="LASTMODI_DATE" />
+		</property>
+		<property name="companyId" type="java.lang.Integer">
+			<column name="COMPANY_ID" />
+		</property>
+		<property name="hrmDepShowRow" type="java.lang.Integer">
+			<column name="HRM_DEP_SHOWROW" />
+		</property>
+	</class>
+	<class name="com.pinhuba.core.pojo.SysConfig" table="SYS_CONFIG">
+		<id name="primaryKey" type="long">
+			<column name="CONFIG_ID" />
+			<generator class="sequence">
+				<param name="sequence">SYS_CONFIG_ID</param>
+			</generator>
+		</id>
+		<property name="methodId" type="java.lang.String">
+			<column name="METHOD_ID" />
+		</property>
+		<property name="projectName" type="java.lang.String">
+			<column name="PROJECT_NAME" />
+		</property>
+		<property name="projectEgName" type="java.lang.String">
+			<column name="PROJECT_EGNAME" />
+		</property>
+		<property name="projectView" type="java.lang.String">
+			<column name="PROJECT_VIEW" />
+		</property>
+	</class>
+	<class name="com.pinhuba.core.pojo.OaWarehouse" table="OA_WAREHOUSE">
+		<id name="primaryKey" type="long">
+			<column name="OA_WARE_ID" />
+			<generator class="sequence">
+				<param name="sequence">OA_WARE_ID</param>
+			</generator>
+		</id>
+		<property name="oaWareName" type="java.lang.String">
+			<column name="OA_WARE_NAME" />
+		</property>
+		<property name="oaWareType" type="java.lang.Integer">
+			<column name="OA_WARE_TYPE" />
+		</property>
+		<property name="oaKeyword" type="java.lang.String">
+			<column name="OA_KEYWORD" />
+		</property>
+		<property name="oaWareEmp" type="java.lang.String">
+			<column name="OA_WARE_EMP" />
+		</property>
+		<property name="oaWareText" type="java.lang.String" >
+			<column name="OA_WARE_TEXT" />
+		</property>
+		<property name="oaWareTime" type="java.lang.String">
+			<column name="OA_WARE_TIME" />
+		</property>
+		<property name="oaWareAcce" type="java.lang.String" >
+			<column name="OA_WARE_ACCE" />
+		</property>
+		<property name="recordId" type="java.lang.String">
+			<column name="RECORD_ID" />
+		</property>
+		<property name="recordDate" type="java.lang.String">
+			<column name="RECORD_DATE" />
+		</property>
+		<property name="lastmodiId" type="java.lang.String">
+			<column name="LASTMODI_ID" />
+		</property>
+		<property name="lastmodiDate" type="java.lang.String">
+			<column name="LASTMODI_DATE" />
+		</property>
+		<property name="companyId" type="java.lang.Integer">
+			<column name="COMPANY_ID" />
+		</property>
+	</class>
+	<class name="com.pinhuba.core.pojo.OaWareType" table="OA_WARE_TYPE">
+		<id name="primaryKey" type="long">
+			<column name="OA_TYPE_ID" />
+			<generator class="sequence">
+				<param name="sequence">OA_WARE_TYPE_ID</param>
+			</generator>
+		</id>
+		<property name="oaTypeName" type="java.lang.String">
+			<column name="OA_TYPE_NAME" />
+		</property>
+		<property name="oaTypeText" type="java.lang.String">
+			<column name="OA_TYPE_TEXT" />
+		</property>
+		<property name="recordId" type="java.lang.String">
+			<column name="RECORD_ID" />
+		</property>
+		<property name="recordDate" type="java.lang.String">
+			<column name="RECORD_DATE" />
+		</property>
+		<property name="lastmodiId" type="java.lang.String">
+			<column name="LASTMODI_ID" />
+		</property>
+		<property name="lastmodiDate" type="java.lang.String">
+			<column name="LASTMODI_DATE" />
+		</property>
+		<property name="companyId" type="java.lang.Integer">
+			<column name="COMPANY_ID" />
+		</property>
+		<property name="formsorware" type="java.lang.Integer">
+			<column name="FORMSORWARE" />
+		</property>
+		<property name="premCount" type="java.lang.Integer">
+			<column name="PREMCOUNT" />
+		</property>
+	</class>
+	<class name="com.pinhuba.core.pojo.OaWaretypeRange" table="OA_WARETYPE_RANGE">
+		<id name="primaryKey" type="long">
+			<column name="OA_WARETYPE_REANGE_ID" />
+			<generator class="sequence">
+				<param name="sequence">OA_WARETYPE_REANGE_ID</param>
+			</generator>
+		</id>
+		<property name="oaWareTypeId" type="java.lang.Integer">
+			<column name="OA_WARE_TYPE_ID" />
+		</property>
+		<property name="hrmEmployeeId" type="java.lang.String">
+			<column name="HRM_EMPLOYEE_ID" />
+		</property>
+		<property name="companyId" type="java.lang.Integer">
+			<column name="COMPANY_ID" />
+		</property>
+		<property name="rangeType" type="java.lang.Integer">
+			<column name="RANGE_TYPE" />
+		</property>
+	</class>
+	<class name="com.pinhuba.core.pojo.OaAnnouncement" table="OA_ANNOUNCEMENT">
+		<id name="primaryKey" type="long">
+			<column name="OA_ANNO_ID" />
+			<generator class="sequence">
+				<param name="sequence">OA_ANNO_ID</param>
+			</generator>
+		</id>
+		<property name="oaAnnoName" type="java.lang.String">
+			<column name="OA_ANNO_NAME" />
+		</property>
+		<property name="oaAnnoType" type="java.lang.Integer">
+			<column name="OA_ANNO_TYPE" />
+		</property>
+		<property name="oaAnnoText" type="java.lang.String" >
+			<column name="OA_ANNO_TEXT" />
+		</property>
+		<property name="oaAnnoEmp" type="java.lang.String">
+			<column name="OA_ANNO_EMP" />
+		</property>
+		<property name="oaAnnoTime" type="java.lang.String">
+			<column name="OA_ANNO_TIME" />
+		</property>
+		<property name="oaAnnoLevel" type="java.lang.Integer">
+			<column name="OA_ANNO_LEVEL" />
+		</property>
+		<property name="oaAnnoStatus" type="java.lang.Integer">
+			<column name="OA_ANNO_STATUS" />
+		</property>
+		<property name="oaAnnoAcce" type="java.lang.String">
+			<column name="OA_ANNO_ACCE" />
+		</property>
+		<property name="recordId" type="java.lang.String">
+			<column name="RECORD_ID" />
+		</property>
+		<property name="recordDate" type="java.lang.String">
+			<column name="RECORD_DATE" />
+		</property>
+		<property name="lastmodiId" type="java.lang.String">
+			<column name="LASTMODI_ID" />
+		</property>
+		<property name="lastmodiDate" type="java.lang.String">
+			<column name="LASTMODI_DATE" />
+		</property>
+		<property name="companyId" type="java.lang.Integer">
+			<column name="COMPANY_ID" />
+		</property>
+	</class>
+	<class name="com.pinhuba.core.pojo.OaBoardroom" table="OA_BOARDROOM">
+		<id name="primaryKey" type="long">
+			<column name="OA_BOARDROOM_ID" />
+			<generator class="sequence">
+				<param name="sequence">OA_BOARDROOM_ID</param>
+			</generator>
+		</id>
+		<property name="oaBoardroomName" type="java.lang.String">
+			<column name="OA_BOARDROOM_NAME" />
+		</property>
+		<property name="oaBoardroomCapacity" type="java.lang.Integer">
+			<column name="OA_BOARDROOM_CAPACITY" />
+		</property>
+		<property name="oaBoardroomEquipment" type="java.lang.String">
+			<column name="OA_BOARDROOM_EQUIPMENT" />
+		</property>
+		<property name="oaBoardroomDescribe" type="java.lang.String" >
+			<column name="OA_BOARDROOM_DESCRIBE" />
+		</property>
+		<property name="oaBoardroomAddress" type="java.lang.String">
+			<column name="OA_BOARDROOM_ADDRESS" />
+		</property>
+		<property name="recordId" type="java.lang.String">
+			<column name="RECORD_ID" />
+		</property>
+		<property name="recordDate" type="java.lang.String">
+			<column name="RECORD_DATE" />
+		</property>
+		<property name="lastmodiId" type="java.lang.String">
+			<column name="LASTMODI_ID" />
+		</property>
+		<property name="lastmodiDate" type="java.lang.String">
+			<column name="LASTMODI_DATE" />
+		</property>
+		<property name="companyId" type="java.lang.Integer">
+			<column name="COMPANY_ID" />
+		</property>
+	</class>
+	<class name="com.pinhuba.core.pojo.OaNotice" table="OA_NOTICE">
+		<id name="primaryKey" type="long">
+			<column name="OA_NOTI_ID" />
+			<generator class="sequence">
+				<param name="sequence">OA_NOTI_ID</param>
+			</generator>
+		</id>
+		<property name="oaNotiName" type="java.lang.String">
+			<column name="OA_NOTI_NAME" />
+		</property>
+		<property name="oaNotiType" type="java.lang.Integer">
+			<column name="OA_NOTI_TYPE" />
+		</property>
+		<property name="oaNotiEmp" type="java.lang.String">
+			<column name="OA_NOTI_EMP" />
+		</property>
+		<property name="oaNotiTime" type="java.lang.String">
+			<column name="OA_NOTI_TIME" />
+		</property>
+		<property name="oaObjEmp" type="java.lang.String" >
+			<column name="OA_OBJ_EMP" />
+		</property>
+		<property name="oaObjDep" type="java.lang.String" >
+			<column name="OA_OBJ_DEP" />
+		</property>
+		<property name="oaNotiText" type="java.lang.String" >
+			<column name="OA_NOTI_TEXT" />
+		</property>
+		<property name="oaNotiStatus" type="java.lang.Integer">
+			<column name="OA_NOTI_STATUS" />
+		</property>
+		<property name="oaNotiAcce" type="java.lang.String">
+			<column name="OA_NOTI_ACCE" />
+		</property>
+		<property name="recordId" type="java.lang.String">
+			<column name="RECORD_ID" />
+		</property>
+		<property name="recordDate" type="java.lang.String">
+			<column name="RECORD_DATE" />
+		</property>
+		<property name="lastmodiId" type="java.lang.String">
+			<column name="LASTMODI_ID" />
+		</property>
+		<property name="lastmodiDate" type="java.lang.String">
+			<column name="LASTMODI_DATE" />
+		</property>
+		<property name="companyId" type="java.lang.Integer">
+			<column name="COMPANY_ID" />
+		</property>
+	</class>
+	<class name="com.pinhuba.core.pojo.OaWorkLog" table="OA_WORK_LOG">
+		<id name="primaryKey" type="long">
+			<column name="OA_WORKLOG_ID" />
+			<generator class="sequence">
+				<param name="sequence">OA_WORKLOG_ID</param>
+			</generator>
+		</id>
+		<property name="oaWorklogTitle" type="java.lang.String">
+			<column name="OA_WORKLOG_TITLE" />
+		</property>
+		<property name="oaWorklogType" type="java.lang.Integer">
+			<column name="OA_WORKLOG_TYPE" />
+		</property>
+		<property name="oaWorklogDate" type="java.lang.String">
+			<column name="OA_WORKLOG_DATE" />
+		</property>
+		<property name="oaWorklogRange" type="java.lang.Integer">
+			<column name="OA_WORKLOG_RANGE" />
+		</property>
+		<property name="oaWorklogDeps" type="java.lang.String" >
+			<column name="OA_WORKLOG_DEPS" />
+		</property>
+		<property name="oaWorklogEmps" type="java.lang.String" >
+			<column name="OA_WORKLOG_EMPS" />
+		</property>
+		<property name="oaWorklogContent" type="java.lang.String" >
+			<column name="OA_WORKLOG_CONTENT" />
+		</property>
+		<property name="oaWorklogLogger" type="java.lang.String">
+			<column name="OA_WORKLOG_LOGGER" />
+		</property>
+		<property name="oaWorklogTankid" type="java.lang.String" >
+			<column name="OA_WORKLOG_TANKID" />
+		</property>
+		<property name="oaWorklogAnnexid" type="java.lang.String" >
+			<column name="OA_WORKLOG_ANNEXID" />
+		</property>
+		<property name="recordId" type="java.lang.String">
+			<column name="RECORD_ID" />
+		</property>
+		<property name="recordDate" type="java.lang.String">
+			<column name="RECORD_DATE" />
+		</property>
+		<property name="lastmodiId" type="java.lang.String">
+			<column name="LASTMODI_ID" />
+		</property>
+		<property name="lastmodiDate" type="java.lang.String">
+			<column name="LASTMODI_DATE" />
+		</property>
+		<property name="companyId" type="java.lang.Integer">
+			<column name="COMPANY_ID" />
+		</property>
+	</class>
+	<class name="com.pinhuba.core.pojo.OaForms" table="OA_FORMS">
+		<id name="primaryKey" type="long">
+			<column name="OA_FORM_ID" />
+			<generator class="sequence">
+				<param name="sequence">OA_FORM_ID</param>
+			</generator>
+		</id>
+		<property name="oaFormName" type="java.lang.String">
+			<column name="OA_FORM_NAME" />
+		</property>
+		<property name="oaFormType" type="java.lang.Integer">
+			<column name="OA_FORM_TYPE" />
+		</property>
+		<property name="oaFormText" type="java.lang.String" >
+			<column name="OA_FORM_TEXT" />
+		</property>
+		<property name="oaFormEmp" type="java.lang.String">
+			<column name="OA_FORM_EMP" />
+		</property>
+		<property name="oaFormTime" type="java.lang.String">
+			<column name="OA_FORM_TIME" />
+		</property>
+		<property name="oaFormAcce" type="java.lang.String" >
+			<column name="OA_FORM_ACCE" />
+		</property>
+		<property name="recordId" type="java.lang.String">
+			<column name="RECORD_ID" />
+		</property>
+		<property name="recordDate" type="java.lang.String">
+			<column name="RECORD_DATE" />
+		</property>
+		<property name="lastmodiId" type="java.lang.String">
+			<column name="LASTMODI_ID" />
+		</property>
+		<property name="lastmodiDate" type="java.lang.String">
+			<column name="LASTMODI_DATE" />
+		</property>
+		<property name="companyId" type="java.lang.Integer">
+			<column name="COMPANY_ID" />
+		</property>
+	</class>
+	<class name="com.pinhuba.core.pojo.OaAdversaria" table="OA_ADVERSARIA">
+		<id name="primaryKey" type="long">
+			<column name="OA_ADVER_ID" />
+			<generator class="sequence">
+				<param name="sequence">OA_ADVER_ID</param>
+			</generator>
+		</id>
+		<property name="oaAdverTitle" type="java.lang.String">
+			<column name="OA_ADVER_TITLE" />
+		</property>
+		<property name="oaAdverLevel" type="java.lang.Integer">
+			<column name="OA_ADVER_LEVEL" />
+		</property>
+		<property name="oaAdverText" type="java.lang.String" >
+			<column name="OA_ADVER_TEXT" />
+		</property>
+		<property name="oaAdverEmp" type="java.lang.String">
+			<column name="OA_ADVER_EMP" />
+		</property>
+		<property name="oaAdverTime" type="java.lang.String">
+			<column name="OA_ADVER_TIME" />
+		</property>
+		<property name="oaAdverStatus" type="java.lang.Integer">
+			<column name="OA_ADVER_STATUS" />
+		</property>
+		<property name="oaAdverAcce" type="java.lang.String">
+			<column name="OA_ADVER_ACCE" />
+		</property>
+		<property name="recordId" type="java.lang.String">
+			<column name="RECORD_ID" />
+		</property>
+		<property name="recordDate" type="java.lang.String">
+			<column name="RECORD_DATE" />
+		</property>
+		<property name="lastmodiId" type="java.lang.String">
+			<column name="LASTMODI_ID" />
+		</property>
+		<property name="lastmodiDate" type="java.lang.String">
+			<column name="LASTMODI_DATE" />
+		</property>
+		<property name="companyId" type="java.lang.Integer">
+			<column name="COMPANY_ID" />
+		</property>
+	</class>
+	<class name="com.pinhuba.core.pojo.OaMeetapply" table="OA_MEETAPPLY">
+		<id name="primaryKey" type="long">
+			<column name="OA_MEETAPPLY_ID" />
+			<generator class="sequence">
+				<param name="sequence">OA_MEETAPPLY_ID</param>
+			</generator>
+		</id>
+		<property name="oaMeetapplyName" type="java.lang.String">
+			<column name="OA_MEETAPPLY_NAME" />
+		</property>
+		<property name="oaMeetapplyTheme" type="java.lang.String">
+			<column name="OA_MEETAPPLY_THEME" />
+		</property>
+		<property name="oaMeetapplyEmp" type="java.lang.String">
+			<column name="OA_MEETAPPLY_EMP" />
+		</property>
+		<property name="oaMeetapplyDate" type="java.lang.String">
+			<column name="OA_MEETAPPLY_DATE" />
+		</property>
+		<property name="oaMeetapplyDep" type="java.lang.String">
+			<column name="OA_MEETAPPLY_DEP" />
+		</property>
+		<property name="oaMeetapplyEmpw" type="java.lang.String" >
+			<column name="OA_MEETAPPLY_EMPW" />
+		</property>
+		<property name="oaMeetapplyEmpn" type="java.lang.String" >
+			<column name="OA_MEETAPPLY_EMPN" />
+		</property>
+		<property name="oaMeetapplySummary" type="java.lang.String" >
+			<column name="OA_MEETAPPLY_SUMMARY" />
+		</property>
+		<property name="oaMeetapplyRoom" type="java.lang.Integer">
+			<column name="OA_MEETAPPLY_ROOM" />
+		</property>
+		<property name="oaMeetapplyStar" type="java.lang.String">
+			<column name="OA_MEETAPPLY_STAR" />
+		</property>
+		<property name="oaMeetapplyEnd" type="java.lang.String">
+			<column name="OA_MEETAPPLY_END" />
+		</property>
+		<property name="oaMeetapplyRes" type="java.lang.String">
+			<column name="OA_MEETAPPLY_RES" />
+		</property>
+		<property name="oaMeetapplyType" type="java.lang.Integer">
+			<column name="OA_MEETAPPLY_TYPE" />
+		</property>
+		<property name="oaMeetapplyStatus" type="java.lang.Integer">
+			<column name="OA_MEETAPPLY_STATUS" />
+		</property>
+		<property name="oaMeetapplyDescribe" type="java.lang.String" >
+			<column name="OA_MEETAPPLY_DESCRIBE" />
+		</property>
+		<property name="oaMeetapplyAffix" type="java.lang.String">
+			<column name="OA_MEETAPPLY_AFFIX" />
+		</property>
+		<property name="oaMeetapplyAwoke" type="java.lang.String">
+			<column name="OA_MEETAPPLY_AWOKE" />
+		</property>
+		<property name="oaMeetapplyDegree" type="java.lang.Integer">
+			<column name="OA_MEETAPPLY_DEGREE" />
+		</property>
+		<property name="recordId" type="java.lang.String">
+			<column name="RECORD_ID" />
+		</property>
+		<property name="recordDate" type="java.lang.String">
+			<column name="RECORD_DATE" />
+		</property>
+		<property name="lastmodiId" type="java.lang.String">
+			<column name="LASTMODI_ID" />
+		</property>
+		<property name="lastmodiDate" type="java.lang.String">
+			<column name="LASTMODI_DATE" />
+		</property>
+		<property name="companyId" type="java.lang.Integer">
+			<column name="COMPANY_ID" />
+		</property>
+	</class>
+	<class name="com.pinhuba.core.pojo.OaJournalsType" table="OA_JOURNALS_TYPE">
+		<id name="primaryKey" type="long">
+			<column name="JOURNALS_TYPE_ID" />
+			<generator class="sequence">
+				<param name="sequence">OA_JOURNALS_TYPE_ID</param>
+			</generator>
+		</id>
+		<property name="journalsTypeName" type="java.lang.String">
+			<column name="JOURNALS_TYPE_NAME" />
+		</property>
+		<property name="journalsTypeProper" type="java.lang.String" >
+			<column name="JOURNALS_TYPE_PROPER" />
+		</property>
+		<property name="journalsTypePress" type="java.lang.String">
+			<column name="JOURNALS_TYPE_PRESS" />
+		</property>
+		<property name="recordId" type="java.lang.String">
+			<column name="RECORD_ID" />
+		</property>
+		<property name="recordDate" type="java.lang.String">
+			<column name="RECORD_DATE" />
+		</property>
+		<property name="lastmodiId" type="java.lang.String">
+			<column name="LASTMODI_ID" />
+		</property>
+		<property name="lastmodiDate" type="java.lang.String">
+			<column name="LASTMODI_DATE" />
+		</property>
+		<property name="companyId" type="java.lang.Integer">
+			<column name="COMPANY_ID" />
+		</property>
+	</class>
+	<class name="com.pinhuba.core.pojo.OaJournals" table="OA_JOURNALS">
+		<id name="primaryKey" type="long">
+			<column name="JOURNALS_ID" />
+			<generator class="sequence">
+				<param name="sequence">OA_JOURNALS_ID</param>
+			</generator>
+		</id>
+		<property name="journalsTypeId" type="java.lang.Integer">
+			<column name="JOURNALS_TYPE_ID" />
+		</property>
+		<property name="journalsCount" type="java.lang.String">
+			<column name="JOURNALS_COUNT" />
+		</property>
+		<property name="journalsCode" type="java.lang.String">
+			<column name="JOURNALS_CODE" />
+		</property>
+		<property name="journalsContext" type="java.lang.String" >
+			<column name="JOURNALS_CONTEXT" />
+		</property>
+		<property name="journalsFace" type="java.lang.Integer">
+			<column name="JOURNALS_FACE" />
+		</property>
+		<property name="journalsAffix" type="java.lang.String" >
+			<column name="JOURNALS_AFFIX" />
+		</property>
+		<property name="recordId" type="java.lang.String">
+			<column name="RECORD_ID" />
+		</property>
+		<property name="recordDate" type="java.lang.String">
+			<column name="RECORD_DATE" />
+		</property>
+		<property name="lastmodiId" type="java.lang.String">
+			<column name="LASTMODI_ID" />
+		</property>
+		<property name="lastmodiDate" type="java.lang.String">
+			<column name="LASTMODI_DATE" />
+		</property>
+		<property name="companyId" type="java.lang.Integer">
+			<column name="COMPANY_ID" />
+		</property>
+	</class>
+	<class name="com.pinhuba.core.pojo.OaSummary" table="OA_SUMMARY">
+		<id name="primaryKey" type="long">
+			<column name="ID" />
+			<generator class="sequence">
+				<param name="sequence">OA_SUMMARY_ID</param>
+			</generator>
+		</id>
+		<property name="oaSummaryName" type="java.lang.String">
+			<column name="OA_SUMMARY_NAME" />
+		</property>
+		<property name="oaSummaryDate" type="java.lang.String">
+			<column name="OA_SUMMARY_DATE" />
+		</property>
+		<property name="oaSummaryMeetId" type="java.lang.Integer">
+			<column name="OA_SUMMARY_MEET_ID" />
+		</property>
+		<property name="oaSummaryReader" type="java.lang.String" >
+			<column name="OA_SUMMARY_READER" />
+		</property>
+		<property name="oaSummaryContent" type="java.lang.String" >
+			<column name="OA_SUMMARY_CONTENT" />
+		</property>
+		<property name="recordId" type="java.lang.String">
+			<column name="RECORD_ID" />
+		</property>
+		<property name="recordDate" type="java.lang.String">
+			<column name="RECORD_DATE" />
+		</property>
+		<property name="lastmodiId" type="java.lang.String">
+			<column name="LASTMODI_ID" />
+		</property>
+		<property name="lastmodiDate" type="java.lang.String">
+			<column name="LASTMODI_DATE" />
+		</property>
+		<property name="companyId" type="java.lang.Integer">
+			<column name="COMPANY_ID" />
+		</property>
+		<property name="summaryRecorder" type="java.lang.String">
+			<column name="OA_SUMMARY_RECORDER" />
+		</property>
+		<property name="oaSummaryNeirong" type="java.lang.String">
+			<column name="OA_SUMMARY_NEIRONG" />
+		</property>
+	</class>
+	<class name="com.pinhuba.core.pojo.OaCalender" table="OA_CALENDER">
+		<id name="primaryKey" type="long">
+			<column name="OA_CALENDER_ID" />
+			<generator class="sequence">
+				<param name="sequence">OA_CALENDER_ID</param>
+			</generator>
+		</id>
+		<property name="oaCalenderLevel" type="java.lang.Integer">
+			<column name="OA_CALENDER_LEVEL" />
+		</property>
+		<property name="oaCalenderType" type="java.lang.Integer">
+			<column name="OA_CALENDER_TYPE" />
+		</property>
+		<property name="oaCalenderStart" type="java.lang.String">
+			<column name="OA_CALENDER_START" />
+		</property>
+		<property name="oaCalenderEnd" type="java.lang.String">
+			<column name="OA_CALENDER_END" />
+		</property>
+		<property name="oaCalenderStatus" type="java.lang.Integer">
+			<column name="OA_CALENDER_STATUS" />
+		</property>
+		<property name="oaCalenderContent" type="java.lang.String" >
+			<column name="OA_CALENDER_CONTENT" />
+		</property>
+		<property name="oaCalenderEmp" type="java.lang.String">
+			<column name="OA_CALENDER_EMP" />
+		</property>
+		<property name="recordId" type="java.lang.String">
+			<column name="RECORD_ID" />
+		</property>
+		<property name="recordDate" type="java.lang.String">
+			<column name="RECORD_DATE" />
+		</property>
+		<property name="lastmodiId" type="java.lang.String">
+			<column name="LASTMODI_ID" />
+		</property>
+		<property name="lastmodiDate" type="java.lang.String">
+			<column name="LASTMODI_DATE" />
+		</property>
+		<property name="companyId" type="java.lang.Integer">
+			<column name="COMPANY_ID" />
+		</property>
+	</class>
+	<class name="com.pinhuba.core.pojo.OaCar" table="OA_CAR">
+		<id name="primaryKey" type="long">
+			<column name="OA_CAR_ID" />
+			<generator class="sequence">
+				<param name="sequence">OA_CAR_ID</param>
+			</generator>
+		</id>
+		<property name="oaCarName" type="java.lang.String">
+			<column name="OA_CAR_NAME" />
+		</property>
+		<property name="oaCarCards" type="java.lang.String">
+			<column name="OA_CAR_CARDS" />
+		</property>
+		<property name="oaCarModel" type="java.lang.String">
+			<column name="OA_CAR_MODEL" />
+		</property>
+		<property name="oaCarSta" type="java.lang.Integer">
+			<column name="OA_CAR_STA" />
+		</property>
+		<property name="oaCarType" type="java.lang.Integer">
+			<column name="OA_CAR_TYPE" />
+		</property>
+		<property name="oaCarMete" type="java.lang.String">
+			<column name="OA_CAR_METE" />
+		</property>
+		<property name="oaCarMax" type="java.lang.String">
+			<column name="OA_CAR_MAX" />
+		</property>
+		<property name="oaCarMotorman" type="java.lang.String">
+			<column name="OA_CAR_MOTORMAN" />
+		</property>
+		<property name="oaCarPrice" type="java.lang.Double">
+			<column name="OA_CAR_PRICE" />
+		</property>
+		<property name="oaCarPhoto" type="java.lang.String">
+			<column name="OA_CAR_PHOTO" />
+		</property>
+		<property name="oaCarBuydate" type="java.lang.String">
+			<column name="OA_CAR_BUYDATE" />
+		</property>
+		<property name="oaCarRemark" type="java.lang.String" >
+			<column name="OA_CAR_REMARK" />
+		</property>
+		<property name="recordId" type="java.lang.String">
+			<column name="RECORD_ID" />
+		</property>
+		<property name="recordDate" type="java.lang.String">
+			<column name="RECORD_DATE" />
+		</property>
+		<property name="lastmodiId" type="java.lang.String">
+			<column name="LASTMODI_ID" />
+		</property>
+		<property name="lastmodiDate" type="java.lang.String">
+			<column name="LASTMODI_DATE" />
+		</property>
+		<property name="companyId" type="java.lang.Integer">
+			<column name="COMPANY_ID" />
+		</property>
+	</class>
+	<class name="com.pinhuba.core.pojo.OaCarUse" table="OA_CAR_USE">
+		<id name="primaryKey" type="long">
+			<column name="OA_CARUSE_ID" />
+			<generator class="sequence">
+				<param name="sequence">OA_CARUSE_ID</param>
+			</generator>
+		</id>
+		<property name="oaCaruseName" type="java.lang.String">
+			<column name="OA_CARUSE_NAME" />
+		</property>
+		<property name="oaCaruseCards" type="java.lang.String">
+			<column name="OA_CARUSE_CARDS" />
+		</property>
+		<property name="oaCaruseUser" type="java.lang.String">
+			<column name="OA_CARUSE_USER" />
+		</property>
+		<property name="oaCaruseStar" type="java.lang.String">
+			<column name="OA_CARUSE_STAR" />
+		</property>
+		<property name="oaCaruseEnd" type="java.lang.String">
+			<column name="OA_CARUSE_END" />
+		</property>
+		<property name="oaCaruseDestination" type="java.lang.String">
+			<column name="OA_CARUSE_DESTINATION" />
+		</property>
+		<property name="oaCaruseMileage" type="java.lang.String">
+			<column name="OA_CARUSE_MILEAGE" />
+		</property>
+		<property name="oaCaruseCause" type="java.lang.String">
+			<column name="OA_CARUSE_CAUSE" />
+		</property>
+		<property name="oaCaruseRemark" type="java.lang.String">
+			<column name="OA_CARUSE_REMARK" />
+		</property>
+		<property name="recordId" type="java.lang.String">
+			<column name="RECORD_ID" />
+		</property>
+		<property name="recordDate" type="java.lang.String">
+			<column name="RECORD_DATE" />
+		</property>
+		<property name="lastmodiId" type="java.lang.String">
+			<column name="LASTMODI_ID" />
+		</property>
+		<property name="lastmodiDate" type="java.lang.String">
+			<column name="LASTMODI_DATE" />
+		</property>
+		<property name="companyId" type="java.lang.Integer">
+			<column name="COMPANY_ID" />
+		</property>
+	</class>
+	<class name="com.pinhuba.core.pojo.OaAlbum" table="OA_ALBUM">
+		<id name="primaryKey" type="long">
+			<column name="ALBUM_ID" />
+			<generator class="sequence">
+				<param name="sequence">OA_ALBUM_ID</param>
+			</generator>
+		</id>
+		<property name="albumName" type="java.lang.String">
+			<column name="ALBUM_NAME" />
+		</property>
+		<property name="albumCreateEmployee" type="java.lang.String">
+			<column name="ALBUM_CREATE_EMPLOYEE" />
+		</property>
+		<property name="albumTime" type="java.lang.String">
+			<column name="ALBUM_TIME" />
+		</property>
+		<property name="albumType" type="java.lang.Integer">
+			<column name="ALBUM_TYPE" />
+		</property>
+		<property name="albumPhotoId" type="java.lang.Integer">
+			<column name="ALBUM_PHOTO_ID" />
+		</property>
+		<property name="albumPhotoCount" type="java.lang.Integer">
+			<column name="ALBUM_PHOTO_COUNT" />
+		</property>
+		<property name="albumDesc" type="java.lang.String" >
+			<column name="ALBUM_DESC" />
+		</property>
+		<property name="albumEmps" type="java.lang.String" >
+			<column name="ALBUM_EMPS" />
+		</property>
+		<property name="albumDeps" type="java.lang.String" >
+			<column name="ALBUM_DEPS" />
+		</property>
+		<property name="recordId" type="java.lang.String">
+			<column name="RECORD_ID" />
+		</property>
+		<property name="recordDate" type="java.lang.String">
+			<column name="RECORD_DATE" />
+		</property>
+		<property name="lastmodiId" type="java.lang.String">
+			<column name="LASTMODI_ID" />
+		</property>
+		<property name="lastmodiDate" type="java.lang.String">
+			<column name="LASTMODI_DATE" />
+		</property>
+		<property name="companyId" type="java.lang.Integer">
+			<column name="COMPANY_ID" />
+		</property>
+	</class>
+	<class name="com.pinhuba.core.pojo.OaCarApply" table="OA_CAR_APPLY">
+		<id name="primaryKey" type="long">
+			<column name="APPLY_ID" />
+			<generator class="sequence">
+				<param name="sequence">OA_CAR_APPLY_ID</param>
+			</generator>
+		</id>
+		<property name="applySection" type="java.lang.Integer">
+			<column name="APPLY_SECTION" />
+		</property>
+		<property name="applyUser" type="java.lang.String">
+			<column name="APPLY_USER" />
+		</property>
+		<property name="applyPhone" type="java.lang.String">
+			<column name="APPLY_PHONE" />
+		</property>
+		<property name="applyTask" type="java.lang.String">
+			<column name="APPLY_TASK" />
+		</property>
+		<property name="applyBegindate" type="java.lang.String">
+			<column name="APPLY_BEGINDATE" />
+		</property>
+		<property name="applyEnddate" type="java.lang.String">
+			<column name="APPLY_ENDDATE" />
+		</property>
+		<property name="applyNum" type="java.lang.Integer">
+			<column name="APPLY_NUM" />
+		</property>
+		<property name="carId" type="java.lang.Integer">
+			<column name="CAR_ID" />
+		</property>
+		<property name="recordId" type="java.lang.String">
+			<column name="RECORD_ID" />
+		</property>
+		<property name="recordDate" type="java.lang.String">
+			<column name="RECORD_DATE" />
+		</property>
+		<property name="lastmodiId" type="java.lang.String">
+			<column name="LASTMODI_ID" />
+		</property>
+		<property name="lastmodiDate" type="java.lang.String">
+			<column name="LASTMODI_DATE" />
+		</property>
+		<property name="companyId" type="java.lang.Integer">
+			<column name="COMPANY_ID" />
+		</property>
+		<property name="applyAppendnews" type="java.lang.String">
+			<column name="APPLY_APPENDNEWS" />
+		</property>
+		<property name="oaCarStatus" type="java.lang.Integer">
+			<column name="OA_CAR_STATUS" />
+		</property>
+	</class>
+	<class name="com.pinhuba.core.pojo.OaPhoto" table="OA_PHOTO">
+		<id name="primaryKey" type="long">
+			<column name="PHOTO_ID" />
+			<generator class="sequence">
+				<param name="sequence">OA_PHOTO_ID</param>
+			</generator>
+		</id>
+		<property name="photoName" type="java.lang.String">
+			<column name="PHOTO_NAME" />
+		</property>
+		<property name="photoTime" type="java.lang.String">
+			<column name="PHOTO_TIME" />
+		</property>
+		<property name="photoDesc" type="java.lang.String" >
+			<column name="PHOTO_DESC" />
+		</property>
+		<property name="albumId" type="java.lang.Integer">
+			<column name="ALBUM_ID" />
+		</property>
+		<property name="imageId" type="java.lang.Integer">
+			<column name="IMAGE_ID" />
+		</property>
+		<property name="recordId" type="java.lang.String">
+			<column name="RECORD_ID" />
+		</property>
+		<property name="recordDate" type="java.lang.String">
+			<column name="RECORD_DATE" />
+		</property>
+		<property name="lastmodiId" type="java.lang.String">
+			<column name="LASTMODI_ID" />
+		</property>
+		<property name="lastmodiDate" type="java.lang.String">
+			<column name="LASTMODI_DATE" />
+		</property>
+		<property name="companyId" type="java.lang.Integer">
+			<column name="COMPANY_ID" />
+		</property>
+	</class>
+	<class name="com.pinhuba.core.pojo.OaChatters" table="OA_CHATTERS">
+		<id name="primaryKey" type="long">
+			<column name="OA_CHAT_ID" />
+			<generator class="sequence">
+				<param name="sequence">OA_CHAT_ID</param>
+			</generator>
+		</id>
+		<property name="oaChatEmp" type="java.lang.String">
+			<column name="OA_CHAT_EMP" />
+		</property>
+		<property name="oaChatSex" type="java.lang.Integer">
+			<column name="OA_CHAT_SEX" />
+		</property>
+		<property name="oaChatCom" type="java.lang.String">
+			<column name="OA_CHAT_COM" />
+		</property>
+		<property name="oaChatGroup" type="java.lang.Integer">
+			<column name="OA_CHAT_GROUP" />
+		</property>
+		<property name="oaChatAddress" type="java.lang.String">
+			<column name="OA_CHAT_ADDRESS" />
+		</property>
+		<property name="oaHomeTel" type="java.lang.String">
+			<column name="OA_HOME_TEL" />
+		</property>
+		<property name="oaChatMobile" type="java.lang.String">
+			<column name="OA_CHAT_MOBILE" />
+		</property>
+		<property name="oaWorkTel" type="java.lang.String">
+			<column name="OA_WORK_TEL" />
+		</property>
+		<property name="oaChatQq" type="java.lang.String">
+			<column name="OA_CHAT_QQ" />
+		</property>
+		<property name="oaChatMsn" type="java.lang.String">
+			<column name="OA_CHAT_MSN" />
+		</property>
+		<property name="oaChatEmail" type="java.lang.String">
+			<column name="OA_CHAT_EMAIL" />
+		</property>
+		<property name="oaChatPhotos" type="java.lang.String">
+			<column name="OA_CHAT_PHOTOS" />
+		</property>
+		<property name="oaIsShare" type="java.lang.Integer">
+			<column name="OA_IS_SHARE" />
+		</property>
+		<property name="oaShareEmp" type="java.lang.String" >
+			<column name="OA_SHARE_EMP" />
+		</property>
+		<property name="oaCheckId" type="java.lang.Integer">
+			<column name="OA_CHECK_ID" />
+		</property>
+		<property name="recordId" type="java.lang.String">
+			<column name="RECORD_ID" />
+		</property>
+		<property name="recordDate" type="java.lang.String">
+			<column name="RECORD_DATE" />
+		</property>
+		<property name="lastmodiId" type="java.lang.String">
+			<column name="LASTMODI_ID" />
+		</property>
+		<property name="lastmodiDate" type="java.lang.String">
+			<column name="LASTMODI_DATE" />
+		</property>
+		<property name="companyId" type="java.lang.Integer">
+			<column name="COMPANY_ID" />
+		</property>
+	</class>
+	<class name="com.pinhuba.core.pojo.OaChatGroups" table="OA_CHAT_GROUPS">
+		<id name="primaryKey" type="long">
+			<column name="OA_CHATGP_ID" />
+			<generator class="sequence">
+				<param name="sequence">OA_CHATGP_ID</param>
+			</generator>
+		</id>
+		<property name="oaChatgpName" type="java.lang.String">
+			<column name="OA_CHATGP_NAME" />
+		</property>
+		<property name="oaChatgpDetail" type="java.lang.String" >
+			<column name="OA_CHATGP_DETAIL" />
+		</property>
+		<property name="recordId" type="java.lang.String">
+			<column name="RECORD_ID" />
+		</property>
+		<property name="recordDate" type="java.lang.String">
+			<column name="RECORD_DATE" />
+		</property>
+		<property name="lastmodiId" type="java.lang.String">
+			<column name="LASTMODI_ID" />
+		</property>
+		<property name="lastmodiDate" type="java.lang.String">
+			<column name="LASTMODI_DATE" />
+		</property>
+		<property name="companyId" type="java.lang.Integer">
+			<column name="COMPANY_ID" />
+		</property>
+	</class>
+	<class name="com.pinhuba.core.pojo.OaCarMainten" table="OA_CAR_MAINTEN">
+		<id name="primaryKey" type="long">
+			<column name="OA_MAINTEN_ID" />
+			<generator class="sequence">
+				<param name="sequence">OA_MAINTEN_ID</param>
+			</generator>
+		</id>
+		<property name="oaMaintenCards" type="java.lang.String">
+			<column name="OA_MAINTEN_CARDS" />
+		</property>
+		<property name="oaMaintenName" type="java.lang.String">
+			<column name="OA_MAINTEN_NAME" />
+		</property>
+		<property name="oaMaintenEmp" type="java.lang.String">
+			<column name="OA_MAINTEN_EMP" />
+		</property>
+		<property name="oaMaintenDate" type="java.lang.String">
+			<column name="OA_MAINTEN_DATE" />
+		</property>
+		<property name="oaMaintenType" type="java.lang.Integer">
+			<column name="OA_MAINTEN_TYPE" />
+		</property>
+		<property name="oaMaintenCause" type="java.lang.String">
+			<column name="OA_MAINTEN_CAUSE" />
+		</property>
+		<property name="oaMaintenCharge" type="java.lang.Double">
+			<column name="OA_MAINTEN_CHARGE" />
+		</property>
+		<property name="oaMaintenRemark" type="java.lang.String">
+			<column name="OA_MAINTEN_REMARK" />
+		</property>
+		<property name="recordId" type="java.lang.String">
+			<column name="RECORD_ID" />
+		</property>
+		<property name="recordDate" type="java.lang.String">
+			<column name="RECORD_DATE" />
+		</property>
+		<property name="lastmodiId" type="java.lang.String">
+			<column name="LASTMODI_ID" />
+		</property>
+		<property name="lastmodiDate" type="java.lang.String">
+			<column name="LASTMODI_DATE" />
+		</property>
+		<property name="companyId" type="java.lang.Integer">
+			<column name="COMPANY_ID" />
+		</property>
+	</class>
+	<class name="com.pinhuba.core.pojo.OaSmsSend" table="OA_SMS_SEND">
+		<id name="primaryKey" type="long">
+			<column name="OA_SMS_SEND_ID" />
+			<generator class="sequence">
+				<param name="sequence">OA_SMS_SEND_ID</param>
+			</generator>
+		</id>
+		<property name="oaSmsSendEmp" type="java.lang.String">
+			<column name="OA_SMS_SEND_EMP" />
+		</property>
+		<property name="oaSmsSendAcpemp" type="java.lang.String" >
+			<column name="OA_SMS_SEND_ACPEMP" />
+		</property>
+		<property name="oaSmsSendAcpempName" type="java.lang.String" >
+			<column name="OA_SMS_SEND_ACPEMP_NAME" />
+		</property>
+		<property name="oaSmsSendTime" type="java.lang.String">
+			<column name="OA_SMS_SEND_TIME" />
+		</property>
+		<property name="oaSmsSendContent" type="java.lang.String" >
+			<column name="OA_SMS_SEND_CONTENT" />
+		</property>
+		<property name="oaSmsType" type="java.lang.Integer">
+			<column name="OA_SMS_TYPE" />
+		</property>
+		<property name="recordId" type="java.lang.String">
+			<column name="RECORD_ID" />
+		</property>
+		<property name="recordDate" type="java.lang.String">
+			<column name="RECORD_DATE" />
+		</property>
+		<property name="companyId" type="java.lang.Integer">
+			<column name="COMPANY_ID" />
+		</property>
+	</class>
+	<class name="com.pinhuba.core.pojo.OaSmsInbox" table="OA_SMS_INBOX">
+		<id name="primaryKey" type="long">
+			<column name="OA_SMS_INBOX_ID" />
+			<generator class="sequence">
+				<param name="sequence">OA_SMS_INBOX_ID</param>
+			</generator>
+		</id>
+		<property name="oaSmsInboxSenderid" type="java.lang.String">
+			<column name="OA_SMS_INBOX_SENDERID" />
+		</property>
+		<property name="oaSmsInboxSenderName" type="java.lang.String">
+			<column name="OA_SMS_INBOX_SENDER_NAME" />
+		</property>
+		<property name="oaSmsInboxSendtime" type="java.lang.String">
+			<column name="OA_SMS_INBOX_SENDTIME" />
+		</property>
+		<property name="oaSmsInboxContent" type="java.lang.String" >
+			<column name="OA_SMS_INBOX_CONTENT" />
+		</property>
+		<property name="oaSmsInboxEmp" type="java.lang.String">
+			<column name="OA_SMS_INBOX_EMP" />
+		</property>
+		<property name="oaSmsInboxIsread" type="java.lang.Integer">
+			<column name="OA_SMS_INBOX_ISREAD" />
+		</property>
+		<property name="oaSmsType" type="java.lang.Integer">
+			<column name="OA_SMS_TYPE" />
+		</property>
+		<property name="recordId" type="java.lang.String">
+			<column name="RECORD_ID" />
+		</property>
+		<property name="recordDate" type="java.lang.String">
+			<column name="RECORD_DATE" />
+		</property>
+		<property name="companyId" type="java.lang.Integer">
+			<column name="COMPANY_ID" />
+		</property>
+	</class>
+	<class name="com.pinhuba.core.pojo.OaBook" table="OA_BOOK">
+		<id name="primaryKey" type="long">
+			<column name="OA_BOOK_ID" />
+			<generator class="sequence">
+				<param name="sequence">OA_BOOK_ID</param>
+			</generator>
+		</id>
+		<property name="oaBookName" type="java.lang.String">
+			<column name="OA_BOOK_NAME" />
+		</property>
+		<property name="oaBookDep" type="java.lang.Integer">
+			<column name="OA_BOOK_DEP" />
+		</property>
+		<property name="oaBookCode" type="java.lang.String">
+			<column name="OA_BOOK_CODE" />
+		</property>
+		<property name="oaBookType" type="java.lang.Integer">
+			<column name="OA_BOOK_TYPE" />
+		</property>
+		<property name="oaBookAuthor" type="java.lang.String">
+			<column name="OA_BOOK_AUTHOR" />
+		</property>
+		<property name="oaBookIsbn" type="java.lang.String">
+			<column name="OA_BOOK_ISBN" />
+		</property>
+		<property name="oaBookConcern" type="java.lang.String">
+			<column name="OA_BOOK_CONCERN" />
+		</property>
+		<property name="oaPublishDate" type="java.lang.String">
+			<column name="OA_PUBLISH_DATE" />
+		</property>
+		<property name="oaBookAddress" type="java.lang.String">
+			<column name="OA_BOOK_ADDRESS" />
+		</property>
+		<property name="oaBookCount" type="java.lang.Integer">
+			<column name="OA_BOOK_COUNT" />
+		</property>
+		<property name="oaBookRemain" type="java.lang.Integer">
+			<column name="OA_BOOK_REMAIN" />
+		</property>
+		<property name="oaBookPrice" type="java.lang.Double">
+			<column name="OA_BOOK_PRICE" />
+		</property>
+		<property name="oaBuyDate" type="java.lang.String">
+			<column name="OA_BUY_DATE" />
+		</property>
+		<property name="oaBookSynopsis" type="java.lang.String" >
+			<column name="OA_BOOK_SYNOPSIS" />
+		</property>
+		<property name="oaRegistyDate" type="java.lang.String">
+			<column name="OA_REGISTY_DATE" />
+		</property>
+		<property name="oaBookBooker" type="java.lang.String">
+			<column name="OA_BOOK_BOOKER" />
+		</property>
+		<property name="oaBookRemark" type="java.lang.String" >
+			<column name="OA_BOOK_REMARK" />
+		</property>
+		<property name="oaBookAcce" type="java.lang.String">
+			<column name="OA_BOOK_ACCE" />
+		</property>
+		<property name="recordId" type="java.lang.String">
+			<column name="RECORD_ID" />
+		</property>
+		<property name="recordDate" type="java.lang.String">
+			<column name="RECORD_DATE" />
+		</property>
+		<property name="lastmodiId" type="java.lang.String">
+			<column name="LASTMODI_ID" />
+		</property>
+		<property name="lastmodiDate" type="java.lang.String">
+			<column name="LASTMODI_DATE" />
+		</property>
+		<property name="companyId" type="java.lang.Integer">
+			<column name="COMPANY_ID" />
+		</property>
+	</class>
+	<class name="com.pinhuba.core.pojo.OaRegulations" table="OA_REGULATIONS">
+		<id name="primaryKey" type="long">
+			<column name="OA_REGULATIONS_ID" />
+			<generator class="sequence">
+				<param name="sequence">OA_REGULATIONS_ID</param>
+			</generator>
+		</id>
+		<property name="oaRegulationsTitle" type="java.lang.String">
+			<column name="OA_REGULATIONS_TITLE" />
+		</property>
+		<property name="oaRegulationsType" type="java.lang.Integer">
+			<column name="OA_REGULATIONS_TYPE" />
+		</property>
+		<property name="oaRegulationsEmp" type="java.lang.String">
+			<column name="OA_REGULATIONS_EMP" />
+		</property>
+		<property name="oaRegulationsTime" type="java.lang.String">
+			<column name="OA_REGULATIONS_TIME" />
+		</property>
+		<property name="oaRegulationsAttachs" type="java.lang.String" >
+			<column name="OA_REGULATIONS_ATTACHS" />
+		</property>
+		<property name="recordId" type="java.lang.String">
+			<column name="RECORD_ID" />
+		</property>
+		<property name="recordDate" type="java.lang.String">
+			<column name="RECORD_DATE" />
+		</property>
+		<property name="lastmodiId" type="java.lang.String">
+			<column name="LASTMODI_ID" />
+		</property>
+		<property name="lastmodiDate" type="java.lang.String">
+			<column name="LASTMODI_DATE" />
+		</property>
+		<property name="companyId" type="java.lang.Integer">
+			<column name="COMPANY_ID" />
+		</property>
+		<property name="regulationsStatus" type="java.lang.Integer">
+			<column name="OA_REGULATIONS_STATUS" />
+		</property>
+		<property name="regulatStratTime" type="java.lang.String">
+			<column name="OA_REGULATIONS_STARTTIME" />
+		</property>
+		<property name="regulatContext" type="java.lang.String" >
+			<column name="OA_REGULATIONS_CONTEXT" />
+		</property>
+	</class>
+	<class name="com.pinhuba.core.pojo.OaBookBr" table="OA_BOOK_BR">
+		<id name="primaryKey" type="long">
+			<column name="OA_BR_ID" />
+			<generator class="sequence">
+				<param name="sequence">OA_BR_ID</param>
+			</generator>
+		</id>
+		<property name="oaBrBookid" type="java.lang.Integer">
+			<column name="OA_BR_BOOKID" />
+		</property>
+		<property name="oaBrLendn" type="java.lang.String">
+			<column name="OA_BR_LENDN" />
+		</property>
+		<property name="oaBrLendw" type="java.lang.String">
+			<column name="OA_BR_LENDW" />
+		</property>
+		<property name="oaBrBdate" type="java.lang.String">
+			<column name="OA_BR_BDATE" />
+		</property>
+		<property name="oaBrRdate" type="java.lang.String">
+			<column name="OA_BR_RDATE" />
+		</property>
+		<property name="oaBrDate" type="java.lang.String">
+			<column name="OA_BR_DATE" />
+		</property>
+		<property name="oaBrCount" type="java.lang.Integer">
+			<column name="OA_BR_COUNT" />
+		</property>
+		<property name="oaBrBooker" type="java.lang.String">
+			<column name="OA_BR_BOOKER" />
+		</property>
+		<property name="oaBrStatus" type="java.lang.Integer">
+			<column name="OA_BR_STATUS" />
+		</property>
+		<property name="oaBrRemark" type="java.lang.String" >
+			<column name="OA_BR_REMARK" />
+		</property>
+		<property name="recordId" type="java.lang.String">
+			<column name="RECORD_ID" />
+		</property>
+		<property name="recordDate" type="java.lang.String">
+			<column name="RECORD_DATE" />
+		</property>
+		<property name="lastmodiId" type="java.lang.String">
+			<column name="LASTMODI_ID" />
+		</property>
+		<property name="lastmodiDate" type="java.lang.String">
+			<column name="LASTMODI_DATE" />
+		</property>
+		<property name="companyId" type="java.lang.Integer">
+			<column name="COMPANY_ID" />
+		</property>
+	</class>
+	<class name="com.pinhuba.core.pojo.OaForums" table="OA_FORUMS">
+		<id name="primaryKey" type="long">
+			<column name="OA_FORUM_ID" />
+			<generator class="sequence">
+				<param name="sequence">OA_FORUM_ID</param>
+			</generator>
+		</id>
+		<property name="oaForumName" type="java.lang.String">
+			<column name="OA_FORUM_NAME" />
+		</property>
+		<property name="oaForumText" type="java.lang.String" >
+			<column name="OA_FORUM_TEXT" />
+		</property>
+		<property name="oaForumEmp" type="java.lang.String">
+			<column name="OA_FORUM_EMP" />
+		</property>
+		<property name="oaForumAdmin" type="java.lang.String">
+			<column name="OA_FORUM_ADMIN" />
+		</property>
+		<property name="oaForumTime" type="java.lang.String">
+			<column name="OA_FORUM_TIME" />
+		</property>
+		<property name="oaForumImage" type="java.lang.String">
+			<column name="OA_FORUM_IMAGE" />
+		</property>
+		<property name="recordId" type="java.lang.String">
+			<column name="RECORD_ID" />
+		</property>
+		<property name="recordDate" type="java.lang.String">
+			<column name="RECORD_DATE" />
+		</property>
+		<property name="lastmodiId" type="java.lang.String">
+			<column name="LASTMODI_ID" />
+		</property>
+		<property name="lastmodiDate" type="java.lang.String">
+			<column name="LASTMODI_DATE" />
+		</property>
+		<property name="companyId" type="java.lang.Integer">
+			<column name="COMPANY_ID" />
+		</property>
+	</class>
+	<class name="com.pinhuba.core.pojo.OaPosts" table="OA_POSTS">
+		<id name="primaryKey" type="long">
+			<column name="OA_POST_ID" />
+			<generator class="sequence">
+				<param name="sequence">OA_POST_ID</param>
+			</generator>
+		</id>
+		<property name="oaPostName" type="java.lang.String">
+			<column name="OA_POST_NAME" />
+		</property>
+		<property name="oaPostText" type="java.lang.String" >
+			<column name="OA_POST_TEXT" />
+		</property>
+		<property name="oaPostForum" type="java.lang.Integer">
+			<column name="OA_POST_FORUM" />
+		</property>
+		<property name="oaPostEmp" type="java.lang.String">
+			<column name="OA_POST_EMP" />
+		</property>
+		<property name="oaPostTime" type="java.lang.String">
+			<column name="OA_POST_TIME" />
+		</property>
+		<property name="oaPostLastregter" type="java.lang.String">
+			<column name="OA_POST_LASTREGTER" />
+		</property>
+		<property name="oaLastRegEmp" type="java.lang.String">
+			<column name="OA_LAST_REG_EMP" />
+		</property>
+		<property name="oaReadCount" type="java.lang.Integer">
+			<column name="OA_READ_COUNT" />
+		</property>
+		<property name="oaIsPost" type="java.lang.Integer">
+			<column name="OA_IS_POST" />
+		</property>
+		<property name="oaPostReg" type="java.lang.Integer">
+			<column name="OA_POST_REG" />
+		</property>
+		<property name="oaIsBoutique" type="java.lang.Integer">
+			<column name="OA_IS_BOUTIQUE" />
+		</property>
+		<property name="recordId" type="java.lang.String">
+			<column name="RECORD_ID" />
+		</property>
+		<property name="recordDate" type="java.lang.String">
+			<column name="RECORD_DATE" />
+		</property>
+		<property name="lastModiId" type="java.lang.String">
+			<column name="LAST_MODI_ID" />
+		</property>
+		<property name="lastModiDate" type="java.lang.String">
+			<column name="LAST_MODI_DATE" />
+		</property>
+		<property name="companyId" type="java.lang.Integer">
+			<column name="COMPANY_ID" />
+		</property>
+	</class>
+	<class name="com.pinhuba.core.pojo.OaMailInbox" table="OA_MAIL_INBOX">
+		<id name="primaryKey" type="long">
+			<column name="OA_MAIL_INBOX_ID" />
+			<generator class="sequence">
+				<param name="sequence">OA_MAIL_INBOX_ID</param>
+			</generator>
+		</id>
+		<property name="oaMailInboxSendid" type="java.lang.String">
+			<column name="OA_MAIL_INBOX_SENDID" />
+		</property>
+		<property name="oaMailInboxSendName" type="java.lang.String">
+			<column name="OA_MAIL_INBOX_SENDNAME" />
+		</property>
+		<property name="oaMailInboxSenderdep" type="java.lang.String">
+			<column name="OA_MAIL_INBOX_SENDERDEP" />
+		</property>
+		<property name="oaMailInboxSendtime" type="java.lang.String">
+			<column name="OA_MAIL_INBOX_SENDTIME" />
+		</property>
+		<property name="oaMailInboxIsurgent" type="java.lang.Integer">
+			<column name="OA_MAIL_INBOX_ISURGENT" />
+		</property>
+		<property name="oaMailInboxTitle" type="java.lang.String">
+			<column name="OA_MAIL_INBOX_TITLE" />
+		</property>
+		<property name="oaMailInboxContent" type="java.lang.String" >
+			<column name="OA_MAIL_INBOX_CONTENT" />
+		</property>
+		<property name="oaMailInboxAffix" type="java.lang.String">
+			<column name="OA_MAIL_INBOX_AFFIX" />
+		</property>
+		<property name="oaMailInboxIntime" type="java.lang.String">
+			<column name="OA_MAIL_INBOX_INTIME" />
+		</property>
+		<property name="oaMailInboxReceipt" type="java.lang.Integer">
+			<column name="OA_MAIL_RECEIPT" />
+		</property>
+		<property name="oaMailInboxEmpNames" type="java.lang.String" >
+			<column name="OA_MAIL_INBOX_EMPNAMES" />
+		</property>
+		<property name="oaMailInboxEmpids" type="java.lang.String" >
+			<column name="OA_MAIL_INBOX_EMPIDS" />
+		</property>
+		<property name="oaMailInboxEmpCSids" type="java.lang.String" >
+			<column name="OA_MAIL_INBOX_EMPCSIDS" />
+		</property>
+		<property name="oaMailInboxEmpCSNames" type="java.lang.String" >
+			<column name="OA_MAIL_INBOX_EMPCSNAMES" />
+		</property>
+		<property name="oaMailInboxEmpMSNames" type="java.lang.String" >
+			<column name="OA_MAIL_INBOX_EMPMSNAMES" />
+		</property>
+		<property name="recordId" type="java.lang.String">
+			<column name="RECORD_ID" />
+		</property>
+		<property name="recordDate" type="java.lang.String">
+			<column name="RECORD_DATE" />
+		</property>
+		<property name="companyId" type="java.lang.Integer">
+			<column name="COMPANY_ID" />
+		</property>
+	</class>
+	<class name="com.pinhuba.core.pojo.OaMailSend" table="OA_MAIL_SEND">
+		<id name="primaryKey" type="long">
+			<column name="OA_MAIL_SEND_ID" />
+			<generator class="sequence">
+				<param name="sequence">OA_MAIL_SEND_ID</param>
+			</generator>
+		</id>
+		<property name="oaMailSendSenderid" type="java.lang.String">
+			<column name="OA_MAIL_SEND_SENDERID" />
+		</property>
+		<property name="oaMailSendSenddep" type="java.lang.String">
+			<column name="OA_MAIL_SEND_SENDDEP" />
+		</property>
+		<property name="oaMailSendEmpids" type="java.lang.String" >
+			<column name="OA_MAIL_SEND_EMPIDS" />
+		</property>
+		<property name="oaMailSendEmpNames" type="java.lang.String" >
+			<column name="OA_MAIL_SEND_EMPNAMES" />
+		</property>
+		<property name="oaMailSendEmpCSids" type="java.lang.String" >
+			<column name="OA_MAIL_SEND_EMPCSIDS" />
+		</property>
+		<property name="oaMailSendEmpCSNames" type="java.lang.String" >
+			<column name="OA_MAIL_SEND_EMPCSNAMES" />
+		</property>
+		<property name="oaMailSendEmpMSids" type="java.lang.String" >
+			<column name="OA_MAIL_SEND_EMPMSIDS" />
+		</property>
+		<property name="oaMailSendEmpMSNames" type="java.lang.String" >
+			<column name="OA_MAIL_SEND_EMPMSNAMES" />
+		</property>
+		<property name="oaMailInboxReceipt" type="java.lang.Integer">
+			<column name="OA_MAIL_RECEIPT" />
+		</property>
+		<property name="oaMailSendTime" type="java.lang.String">
+			<column name="OA_MAIL_SEND_TIME" />
+		</property>
+		<property name="oaMailSendSaveTime" type="java.lang.String">
+			<column name="OA_MAIL_SEND_SAVETIME" />
+		</property>
+		<property name="oaMailSendIsurgent" type="java.lang.Integer">
+			<column name="OA_MAIL_SEND_ISURGENT" />
+		</property>
+		<property name="oaMailSendTitle" type="java.lang.String">
+			<column name="OA_MAIL_SEND_TITLE" />
+		</property>
+		<property name="oaMailSendContent" type="java.lang.String" >
+			<column name="OA_MAIL_SEND_CONTENT" />
+		</property>
+		<property name="oaMailSendAffix" type="java.lang.String">
+			<column name="OA_MAIL_SEND_AFFIX" />
+		</property>
+		<property name="oaMailSendType" type="java.lang.Integer">
+			<column name="OA_MAIL_SEND_TYPE" />
+		</property>
+		<property name="recordId" type="java.lang.String">
+			<column name="RECORD_ID" />
+		</property>
+		<property name="recordDate" type="java.lang.String">
+			<column name="RECORD_DATE" />
+		</property>
+		<property name="companyId" type="java.lang.Integer">
+			<column name="COMPANY_ID" />
+		</property>
+	</class>
+	<class name="com.pinhuba.core.pojo.OaMailEmp" table="OA_MAIL_EMP">
+		<id name="primaryKey" type="long">
+			<column name="OA_MAIL_EMP_ID" />
+			<generator class="sequence">
+				<param name="sequence">OA_MAIL_EMP_ID</param>
+			</generator>
+		</id>
+		<many-to-one name="oaMailEmpInboxid" class="com.pinhuba.core.pojo.OaMailInbox"
+			fetch="select" cascade="none">
+			<column name="OA_MAIL_EMP_INBOXID" />
+		</many-to-one>
+		<property name="oaMailEmpEmpid" type="java.lang.String">
+			<column name="OA_MAIL_EMP_EMPID" />
+		</property>
+		<property name="oaMailEmpEmpname" type="java.lang.String">
+			<column name="OA_MAIL_EMP_EMPNAME" />
+		</property>
+		<property name="oaMailEmpType" type="java.lang.Integer">
+			<column name="OA_MAIL_EMP_TYPE" />
+		</property>
+		<property name="oaMailEmpIsread" type="java.lang.Integer">
+			<column name="OA_MAIL_EMP_ISREAD" />
+		</property>
+		<property name="oaMailEmpStatus" type="java.lang.Integer">
+			<column name="OA_MAIL_EMP_STATUS" />
+		</property>
+		<property name="recordId" type="java.lang.String">
+			<column name="RECORD_ID" />
+		</property>
+		<property name="recordDate" type="java.lang.String">
+			<column name="RECORD_DATE" />
+		</property>
+		<property name="companyId" type="java.lang.Integer">
+			<column name="COMPANY_ID" />
+		</property>
+	</class>
+	<class name="com.pinhuba.core.pojo.OaBookType" table="OA_BOOK_TYPE">
+		<id name="primaryKey" type="long">
+			<column name="OA_BOOKTYPE_ID" />
+			<generator class="sequence">
+				<param name="sequence">OA_BOOKTYPE_ID</param>
+			</generator>
+		</id>
+		<property name="oaBooktypeName" type="java.lang.String">
+			<column name="OA_BOOKTYPE_NAME" />
+		</property>
+		<property name="oaBooktypeRemark" type="java.lang.String" >
+			<column name="OA_BOOKTYPE_REMARK" />
+		</property>
+		<property name="recordId" type="java.lang.String">
+			<column name="RECORD_ID" />
+		</property>
+		<property name="recordDate" type="java.lang.String">
+			<column name="RECORD_DATE" />
+		</property>
+		<property name="lastmodiId" type="java.lang.String">
+			<column name="LASTMODI_ID" />
+		</property>
+		<property name="lastmodiDate" type="java.lang.String">
+			<column name="LASTMODI_DATE" />
+		</property>
+		<property name="companyId" type="java.lang.Integer">
+			<column name="COMPANY_ID" />
+		</property>
+	</class>
+	<class name="com.pinhuba.core.pojo.OaVote" table="OA_VOTE">
+		<id name="primaryKey" type="long">
+			<column name="OA_VOTE_ID" />
+			<generator class="sequence">
+				<param name="sequence">OA_VOTE_ID</param>
+			</generator>
+		</id>
+		<property name="oaVoteName" type="java.lang.String">
+			<column name="OA_VOTE_NAME" />
+		</property>
+		<property name="oaVoteEmp" type="java.lang.String">
+			<column name="OA_VOTE_EMP" />
+		</property>
+		<property name="oaVoteText" type="java.lang.String" >
+			<column name="OA_VOTE_TEXT" />
+		</property>
+		<property name="oaVoteType" type="java.lang.Integer">
+			<column name="OA_VOTE_TYPE" />
+		</property>
+		<property name="oaChooseType" type="java.lang.Integer">
+			<column name="OA_CHOOSE_TYPE" />
+		</property>
+		<property name="oaVoteStart" type="java.lang.String">
+			<column name="OA_VOTE_START" />
+		</property>
+		<property name="oaVoteEnd" type="java.lang.String">
+			<column name="OA_VOTE_END" />
+		</property>
+		<property name="oaRangeDep" type="java.lang.String" >
+			<column name="OA_RANGE_DEP" />
+		</property>
+		<property name="oaRangeEmp" type="java.lang.String" >
+			<column name="OA_RANGE_EMP" />
+		</property>
+		<property name="oaIsAnonymous" type="java.lang.Integer">
+			<column name="OA_IS_ANONYMOUS" />
+		</property>
+		<property name="oaVoteStatus" type="java.lang.Integer">
+			<column name="OA_VOTE_STATUS" />
+		</property>
+		<property name="recordId" type="java.lang.String">
+			<column name="RECORD_ID" />
+		</property>
+		<property name="recordDate" type="java.lang.String">
+			<column name="RECORD_DATE" />
+		</property>
+		<property name="lastmodiId" type="java.lang.String">
+			<column name="LASTMODI_ID" />
+		</property>
+		<property name="lastmodiDate" type="java.lang.String">
+			<column name="LASTMODI_DATE" />
+		</property>
+		<property name="companyId" type="java.lang.Integer">
+			<column name="COMPANY_ID" />
+		</property>
+	</class>
+	<class name="com.pinhuba.core.pojo.OaVoteOption" table="OA_VOTE_OPTION">
+		<id name="primaryKey" type="long">
+			<column name="OA_OPTION_ID" />
+			<generator class="sequence">
+				<param name="sequence">OA_VOTE_OPTION_ID</param>
+			</generator>
+		</id>
+		<property name="oaVoteId" type="java.lang.Integer">
+			<column name="OA_VOTE_ID" />
+		</property>
+		<property name="oaOptionName" type="java.lang.String">
+			<column name="OA_OPTION_NAME" />
+		</property>
+		<property name="oaOptionCount" type="java.lang.Integer">
+			<column name="OA_OPTION_COUNT" />
+		</property>
+		<property name="recordId" type="java.lang.String">
+			<column name="RECORD_ID" />
+		</property>
+		<property name="recordDate" type="java.lang.String">
+			<column name="RECORD_DATE" />
+		</property>
+		<property name="lastmodiId" type="java.lang.String">
+			<column name="LASTMODI_ID" />
+		</property>
+		<property name="lastmodiDate" type="java.lang.String">
+			<column name="LASTMODI_DATE" />
+		</property>
+		<property name="companyId" type="java.lang.Integer">
+			<column name="COMPANY_ID" />
+		</property>
+	</class>
+	<class name="com.pinhuba.core.pojo.OaVoteStatus" table="OA_VOTE_STATUS">
+		<id name="primaryKey" type="long">
+			<column name="OA_RECORD_ID" />
+			<generator class="sequence">
+				<param name="sequence">OA_VOTE_STATUS_ID</param>
+			</generator>
+		</id>
+		<property name="oaVoteRec" type="java.lang.String">
+			<column name="OA_VOTE_REC" />
+		</property>
+		<property name="oaVoteEmp" type="java.lang.String">
+			<column name="OA_VOTE_EMP" />
+		</property>
+		<property name="oaIsAnonymous" type="java.lang.Integer">
+			<column name="OA_IS_ANONYMOUS" />
+		</property>
+		<property name="recordId" type="java.lang.String">
+			<column name="RECORD_ID" />
+		</property>
+		<property name="recordDate" type="java.lang.String">
+			<column name="RECORD_DATE" />
+		</property>
+		<property name="lastmodiId" type="java.lang.String">
+			<column name="LASTMODI_ID" />
+		</property>
+		<property name="lastmodiDate" type="java.lang.String">
+			<column name="LASTMODI_DATE" />
+		</property>
+		<property name="companyId" type="java.lang.Integer">
+			<column name="COMPANY_ID" />
+		</property>
+	</class>
+	<!-- 办公资源 车辆维修 -->
+	<class name="com.pinhuba.core.pojo.OaCarMaintain" table="OA_CAR_MAINTAIN">
+		<id name="primaryKey" type="long">
+			<column name="MAINTAIN_ID" />
+			<generator class="sequence">
+				<param name="sequence">OA_CAR_MAINTAIN_ID</param>
+			</generator>
+		</id>
+		<property name="carId" type="java.lang.Integer">
+			<column name="CAR_ID" />
+		</property>
+		<property name="maintainUser" type="java.lang.String">
+			<column name="MAINTAIN_USER" />
+		</property>
+		<property name="maintainMoney" type="java.lang.String">
+			<column name="MAINTAIN_MONEY" />
+		</property>
+		<property name="maintainDate" type="java.lang.String">
+			<column name="MAINTAIN_DATE" />
+		</property>
+		<property name="maintainType" type="java.lang.Integer">
+			<column name="MAINTAIN_TYPE" />
+		</property>
+		<property name="maintainAppendnews" type="java.lang.String" >
+			<column name="MAINTAIN_APPENDNEWS" />
+		</property>
+		<property name="recordId" type="java.lang.String">
+			<column name="RECORD_ID" />
+		</property>
+		<property name="recordDate" type="java.lang.String">
+			<column name="RECORD_DATE" />
+		</property>
+		<property name="lastmodiId" type="java.lang.String">
+			<column name="LASTMODI_ID" />
+		</property>
+		<property name="lastmodiDate" type="java.lang.String">
+			<column name="LASTMODI_DATE" />
+		</property>
+		<property name="companyId" type="java.lang.Integer">
+			<column name="COMPANY_ID" />
+		</property>
+	</class>
+	<class name="com.pinhuba.core.pojo.SysParam" table="SYS_PARAM">
+		<id name="primaryKey" type="long">
+			<column name="PARAM_ID" />
+			<generator class="sequence">
+				<param name="sequence">SYS_PARAM_ID</param>
+			</generator>
+		</id>
+		<property name="paramIndex" type="java.lang.String">
+			<column name="PARAM_INDEX" />
+		</property>
+		<property name="paramTitle" type="java.lang.String">
+			<column name="PARAM_TITLE" />
+		</property>
+		<property name="paramValue" type="java.lang.String">
+			<column name="PARAM_VALUE" />
+		</property>
+		<property name="paramRemark" type="java.lang.String">
+			<column name="PARAM_REMARK" />
+		</property>
+		<property name="recordId" type="java.lang.String">
+			<column name="RECORD_ID" />
+		</property>
+		<property name="recordDate" type="java.lang.String">
+			<column name="RECORD_DATE" />
+		</property>
+		<property name="lastmodiId" type="java.lang.String">
+			<column name="LASTMODI_ID" />
+		</property>
+		<property name="lastmodiDate" type="java.lang.String">
+			<column name="LASTMODI_DATE" />
+		</property>
+		<property name="companyId" type="java.lang.Integer">
+			<column name="COMPANY_ID" />
+		</property>
+		<property name="paramType" type="java.lang.Integer">
+			<column name="PARAM_TYPE" />
+		</property>
+		<property name="paramTypeValue" type="java.lang.String">
+			<column name="PARAM_TYPE_VALUE" />
+		</property>
+	</class>
+	<class name="com.pinhuba.core.pojo.OaLeaveregistration" table="OA_LEAVEREGISTRATION">
+		<id name="primaryKey" type="long">
+			<column name="ID" />
+			<generator class="sequence">
+				<param name="sequence">OA_LEAVE_ID</param>
+			</generator>
+		</id>
+		<property name="processInstanceId" type="java.lang.String">
+			<column name="PROCESS_INSTANCE_ID" />
+		</property>
+		<property name="applyuser" type="java.lang.String">
+			<column name="APPLYUSER" />
+		</property>
+		<property name="leavereason" type="java.lang.String" >
+			<column name="LEAVEREASON" />
+		</property>
+		<property name="leavetype" type="java.lang.Integer">
+			<column name="LEAVETYPE" />
+		</property>
+		<property name="startdata" type="java.lang.String">
+			<column name="STARTDATA" />
+		</property>
+		<property name="enddata" type="java.lang.String">
+			<column name="ENDDATA" />
+		</property>
+		<property name="realityStartTime" type="java.lang.String">
+			<column name="REALITY_START_TIME" />
+		</property>
+		<property name="realityEndTime" type="java.lang.String">
+			<column name="REALITY_END_TIME" />
+		</property>
+		<property name="recordId" type="java.lang.String">
+			<column name="RECORD_ID" />
+		</property>
+		<property name="recordDate" type="java.lang.String">
+			<column name="RECORD_DATE" />
+		</property>
+		<property name="lastmodiId" type="java.lang.String">
+			<column name="LASTMODI_ID" />
+		</property>
+		<property name="lastmodiDate" type="java.lang.String">
+			<column name="LASTMODI_DATE" />
+		</property>
+		<property name="companyId" type="java.lang.Integer">
+			<column name="COMPANY_ID" />
+		</property>
+		<property name="applydata" type="java.lang.String">
+			<column name="APPLYDATA" />
+		</property>
+		<property name="status" type="java.lang.Integer">
+			<column name="status" />
+		</property>
+	</class>
+	<class name="com.pinhuba.core.pojo.OaTrsvel" table="OA_TRSVEL">
+		<id name="primaryKey" type="long">
+			<column name="ID" />
+			<generator class="sequence">
+				<param name="sequence">OA_TRSVEL_ID</param>
+			</generator>
+		</id>
+		<property name="processInstanceId" type="java.lang.String">
+			<column name="PROCESS_INSTANCE_ID" />
+		</property>
+		<property name="trsvelArea" type="java.lang.String">
+			<column name="TRSVEL_AREA" />
+		</property>
+		<property name="trsvelBegindata" type="java.lang.String">
+			<column name="TRSVEL_BEGINDATA" />
+		</property>
+		<property name="trsvelEnddata" type="java.lang.String">
+			<column name="TRSVEL_ENDDATA" />
+		</property>
+		<property name="trsvelCause" type="java.lang.String" >
+			<column name="TRSVEL_CAUSE" />
+		</property>
+		<property name="trsvelApplyuser" type="java.lang.String">
+			<column name="TRSVEL_APPLYUSER" />
+		</property>
+		<property name="recordId" type="java.lang.String">
+			<column name="RECORD_ID" />
+		</property>
+		<property name="recordDate" type="java.lang.String">
+			<column name="RECORD_DATE" />
+		</property>
+		<property name="lastmodiId" type="java.lang.String">
+			<column name="LASTMODI_ID" />
+		</property>
+		<property name="lastmodiDate" type="java.lang.String">
+			<column name="LASTMODI_DATE" />
+		</property>
+		<property name="companyId" type="java.lang.Integer">
+			<column name="COMPANY_ID" />
+		</property>
+		<property name="applydata" type="java.lang.String">
+			<column name="APPLYDATA" />
+		</property>
+		<property name="status" type="java.lang.Integer">
+			<column name="STATUS" />
+		</property>
+	</class>
+	<class name="com.pinhuba.core.pojo.OaTools" table="OA_TOOLS">
+		<id name="primaryKey" type="long">
+			<column name="OA_TOOL_ID" />
+			<generator class="sequence">
+				<param name="sequence">OA_TOOL_ID</param>
+			</generator>
+		</id>
+		<property name="oaToolText" type="java.lang.String">
+			<column name="OA_TOOL_TEXT" />
+		</property>
+		<property name="oaToolEmp" type="java.lang.String">
+			<column name="OA_TOOL_EMP" />
+		</property>
+		<property name="oaToolImage" type="java.lang.String">
+			<column name="OA_TOOL_IMAGE" />
+		</property>
+		<property name="oaToolPath" type="java.lang.String">
+			<column name="OA_TOOL_PATH" />
+		</property>
+		<property name="recordId" type="java.lang.String">
+			<column name="RECORD_ID" />
+		</property>
+		<property name="recordDate" type="java.lang.String">
+			<column name="RECORD_DATE" />
+		</property>
+		<property name="lastmodiId" type="java.lang.String">
+			<column name="LASTMODI_ID" />
+		</property>
+		<property name="lastmodiDate" type="java.lang.String">
+			<column name="LASTMODI_DATE" />
+		</property>
+		<property name="companyId" type="java.lang.Integer">
+			<column name="COMPANY_ID" />
+		</property>
+		<property name="oaToolType" type="java.lang.Integer">
+			<column name="OA_TOOL_TYPE" />
+		</property>
+		<property name="oaToolImageId" type="java.lang.Integer">
+			<column name="OA_TOOL_IMAGEID" />
+		</property>
+	</class>
+	<class name="com.pinhuba.core.pojo.OaNetdiskShare" table="OA_NETDISK_SHARE">
+		<id name="primaryKey" type="long">
+			<column name="ID" />
+			<generator class="sequence">
+				<param name="sequence">OA_NETDISK_SHARE_ID</param>
+			</generator>
+		</id>
+		<property name="hrmEmployeeId" type="java.lang.String">
+			<column name="HRM_EMPLOYEE_ID" />
+		</property>
+		<property name="folderName" type="java.lang.String">
+			<column name="FOLDER_NAME" />
+		</property>
+		<property name="folderPath" type="java.lang.String" >
+			<column name="FOLDER_PATH" />
+		</property>
+		<property name="netdiskEmps" type="java.lang.String" >
+			<column name="NETDISK_EMPS" />
+		</property>
+		<property name="netdiskDeps" type="java.lang.String" >
+			<column name="NETDISK_DEPS" />
+		</property>
+		<property name="shareDesc" type="java.lang.String" >
+			<column name="SHARE_DESC" />
+		</property>
+		<property name="recordId" type="java.lang.String">
+			<column name="RECORD_ID" />
+		</property>
+		<property name="recordDate" type="java.lang.String">
+			<column name="RECORD_DATE" />
+		</property>
+		<property name="lastmodiId" type="java.lang.String">
+			<column name="LASTMODI_ID" />
+		</property>
+		<property name="lastmodiDate" type="java.lang.String">
+			<column name="LASTMODI_DATE" />
+		</property>
+		<property name="companyId" type="java.lang.Integer">
+			<column name="COMPANY_ID" />
+		</property>
+	</class>
+	<!-- 磁盘管理 -->
+	<class name="com.pinhuba.core.pojo.OaNetdiskConfig" table="OA_NETDISK_CONFIG">
+		<id name="primaryKey" type="long">
+			<column name="ID" />
+			<generator class="sequence">
+				<param name="sequence">OA_NETDISK_CONFIG_ID</param>
+			</generator>
+		</id>
+		<property name="hrmEmployeeId" type="java.lang.String">
+			<column name="HRM_EMPLOYEE_ID" />
+		</property>
+		<property name="usedSpace" type="java.lang.Double">
+			<column name="USED_SPACE" />
+		</property>
+		<property name="totalSpace" type="java.lang.Integer">
+			<column name="TOTAL_SPACE" />
+		</property>
+		<property name="recordId" type="java.lang.String">
+			<column name="RECORD_ID" />
+		</property>
+		<property name="recordDate" type="java.lang.String">
+			<column name="RECORD_DATE" />
+		</property>
+		<property name="lastmodiId" type="java.lang.String">
+			<column name="LASTMODI_ID" />
+		</property>
+		<property name="lastmodiDate" type="java.lang.String">
+			<column name="LASTMODI_DATE" />
+		</property>
+		<property name="companyId" type="java.lang.Integer">
+			<column name="COMPANY_ID" />
+		</property>
+	</class>
+	<class name="com.pinhuba.core.pojo.OaDesktopSet" table="OA_DESKTOP_SET">
+		<id name="primaryKey" type="long">
+			<column name="OA_DESKTOP_ID" />
+			<generator class="sequence">
+				<param name="sequence">OA_DESKTOP_ID</param>
+			</generator>
+		</id>
+		<property name="oaDesktopEmpid" type="java.lang.String">
+			<column name="OA_DESKTOP_EMPID" />
+		</property>
+		<property name="oaDesktopType" type="java.lang.Integer">
+			<column name="OA_DESKTOP_TYPE" />
+		</property>
+		<property name="oaDesktopIsshow" type="java.lang.Integer">
+			<column name="OA_DESKTOP_ISSHOW" />
+		</property>
+		<property name="oaDesktopValue" type="java.lang.String">
+			<column name="OA_DESKTOP_VALUE" />
+		</property>
+		<property name="companyId" type="java.lang.Integer">
+			<column name="COMPANY_ID" />
+		</property>
+		<property name="recordId" type="java.lang.String">
+			<column name="RECORD_ID" />
+		</property>
+		<property name="recordDate" type="java.lang.String">
+			<column name="RECORD_DATE" />
+		</property>
+		<property name="lastmodiId" type="java.lang.String">
+			<column name="LASTMODI_ID" />
+		</property>
+		<property name="lastmodiDate" type="java.lang.String">
+			<column name="LASTMODI_DATE" />
+		</property>
+	</class>
+	<class name="com.pinhuba.core.pojo.HrmTimedrecord" table="HRM_TIMEDRECORD">
+		<id name="primaryKey" type="long">
+			<column name="TIMED_ID" />
+			<generator class="sequence">
+				<param name="sequence">HRM_TIMED_ID</param>
+			</generator>
+		</id>
+		<property name="timedType" type="java.lang.Integer">
+			<column name="TIMED_TYPE" />
+		</property>
+		<property name="timedDate" type="java.lang.String">
+			<column name="TIMED_DATE" />
+		</property>
+		<property name="timedDescription" type="java.lang.String" >
+			<column name="TIMED_DESCRIPTION" />
+		</property>
+		<property name="recordId" type="java.lang.String">
+			<column name="RECORD_ID" />
+		</property>
+		<property name="recordDate" type="java.lang.String">
+			<column name="RECORD_DATE" />
+		</property>
+		<property name="lastmodiId" type="java.lang.String">
+			<column name="LASTMODI_ID" />
+		</property>
+		<property name="lastmodiDate" type="java.lang.String">
+			<column name="LASTMODI_DATE" />
+		</property>
+		<property name="companyId" type="java.lang.Integer">
+			<column name="COMPANY_ID" />
+		</property>
+	</class>
+	<class name="com.pinhuba.core.pojo.OaNetmailSet" table="OA_NETMAIL_SET">
+		<id name="primaryKey" type="long">
+			<column name="OA_NETMAIL_ID" />
+			<generator class="sequence">
+				<param name="sequence">OA_NETMAIL_ID</param>
+			</generator>
+		</id>
+		<property name="oaNetmailName" type="java.lang.String">
+			<column name="OA_NETMAIL_NAME" />
+		</property>
+		<property name="oaNetmailFrom" type="java.lang.String">
+			<column name="OA_NETMAIL_FROM" />
+		</property>
+		<property name="oaNetmailSmtp" type="java.lang.String">
+			<column name="OA_NETMAIL_SMTP" />
+		</property>
+		<property name="oaNetmailSmtpProt" type="java.lang.String">
+			<column name="OA_NETMAIL_SMTPPROT" />
+		</property>
+		<property name="oaNetmailPop3" type="java.lang.String">
+			<column name="OA_NETMAIL_POP3" />
+		</property>
+		<property name="oaNetmailPop3Prot" type="java.lang.String">
+			<column name="OA_NETMAIL_POP3PROT" />
+		</property>
+		<property name="oaNetmailIsSSL" type="java.lang.Integer">
+			<column name="OA_NETMAIL_ISSSL" />
+		</property>
+		<property name="oaNetmailUser" type="java.lang.String">
+			<column name="OA_NETMAIL_USER" />
+		</property>
+		<property name="oaNetmailPassword" type="java.lang.String">
+			<column name="OA_NETMAIL_PASSWORD" />
+		</property>
+		<property name="oaNetmailIsverify" type="java.lang.String">
+			<column name="OA_NETMAIL_ISVERIFY" />
+		</property>
+		<property name="hrmEmployeeId" type="java.lang.String">
+			<column name="HRM_EMPLOYEE_ID" />
+		</property>
+		<property name="companyId" type="java.lang.Integer">
+			<column name="COMPANY_ID" />
+		</property>
+		<property name="recordId" type="java.lang.String">
+			<column name="RECORD_ID" />
+		</property>
+		<property name="recordDate" type="java.lang.String">
+			<column name="RECORD_DATE" />
+		</property>
+		<property name="lastmodiId" type="java.lang.String">
+			<column name="LASTMODI_ID" />
+		</property>
+		<property name="lastmodiDate" type="java.lang.String">
+			<column name="LASTMODI_DATE" />
+		</property>
+		<property name="oaNetmailIssend" type="java.lang.Integer">
+			<column name="OA_NETMAIL_ISSEND" />
+		</property>
+		<property name="oaNetmailIsaccp" type="java.lang.Integer">
+			<column name="OA_NETMAIL_ISACCP" />
+		</property>
+		<property name="oaNetmailIsDefault" type="java.lang.Integer">
+			<column name="OA_NETMAIL_ISDEFAULT" />
+		</property>
+		<property name="oaNetmailCount" type="java.lang.Integer">
+			<column name="OA_NETMAIL_COUNT" />
+		</property>
+	</class>
+	<class name="com.pinhuba.core.pojo.OaNetmailPerson" table="OA_NETMAIL_PERSON">
+		<id name="primaryKey" type="long">
+			<column name="OA_NETMAIL_EMPID" />
+			<generator class="sequence">
+				<param name="sequence">OA_NETMAIL_EMPID</param>
+			</generator>
+		</id>
+		<property name="oaNetmailEmpname" type="java.lang.String">
+			<column name="OA_NETMAIL_EMPNAME" />
+		</property>
+		<property name="oaNetmailEmpmail" type="java.lang.String">
+			<column name="OA_NETMAIL_EMPMAIL" />
+		</property>
+		<property name="hrmEmployeeId" type="java.lang.String">
+			<column name="HRM_EMPLOYEE_ID" />
+		</property>
+		<property name="companyId" type="java.lang.Integer">
+			<column name="COMPANY_ID" />
+		</property>
+		<property name="oaNetmailDate" type="java.lang.String">
+			<column name="OA_NETMAIL_DATE" />
+		</property>
+	</class>
+	<class name="com.pinhuba.core.pojo.OaNetmailSendbox" table="OA_NETMAIL_SENDBOX">
+		<id name="primaryKey" type="long">
+			<column name="OA_NETMAIL_SENDID" />
+			<generator class="sequence">
+				<param name="sequence">OA_NETMAIL_SENDID</param>
+			</generator>
+		</id>
+		<property name="oaNetmailSetFrom" type="java.lang.String">
+			<column name="OA_NETMAIL_SET_FROM" />
+		</property>
+		<property name="oaNetmailSendTime" type="java.lang.String">
+			<column name="OA_NETMAIL_SEND_TIME" />
+		</property>
+		<property name="oaNetmailSendAdders" type="java.lang.String" >
+			<column name="OA_NETMAIL_SEND_ADDERS" />
+		</property>
+		<property name="oaNetmailSendEmpids" type="java.lang.String" >
+			<column name="OA_NETMAIL_SEND_EMPIDS" />
+		</property>
+		<property name="oaNetmailSendIsurgent" type="java.lang.Integer">
+			<column name="OA_NETMAIL_SEND_ISURGENT" />
+		</property>
+		<property name="oaNetmailSendTitle" type="java.lang.String">
+			<column name="OA_NETMAIL_SEND_TITLE" />
+		</property>
+		<property name="oaNetmailSendContent" type="java.lang.String" >
+			<column name="OA_NETMAIL_SEND_CONTENT" />
+		</property>
+		<property name="oaNetmailSendAffix" type="java.lang.String">
+			<column name="OA_NETMAIL_SEND_AFFIX" />
+		</property>
+		<property name="oaNetmailSendType" type="java.lang.Integer">
+			<column name="OA_NETMAIL_SEND_TYPE" />
+		</property>
+		<property name="recordId" type="java.lang.String">
+			<column name="RECORD_ID" />
+		</property>
+		<property name="recordDate" type="java.lang.String">
+			<column name="RECORD_DATE" />
+		</property>
+		<property name="companyId" type="java.lang.Integer">
+			<column name="COMPANY_ID" />
+		</property>
+		<property name="oaNetmailSendEmpid" type="java.lang.String">
+			<column name="OA_NETMAIL_SEND_EMPID" />
+		</property>
+		<property name="oaNetmailReceipt" type="java.lang.Integer">
+			<column name="OA_NETMAIL_RECEIPT" />
+		</property>
+	</class>
+	<class name="com.pinhuba.core.pojo.OaNetmailInbox" table="OA_NETMAIL_INBOX">
+		<id name="primaryKey" type="long">
+			<column name="OA_NETMAIL_INBOX_ID" />
+			<generator class="sequence">
+				<param name="sequence">OA_NETMAIL_INBOX_ID</param>
+			</generator>
+		</id>
+		<property name="oaNetmailInboxSender" type="java.lang.String">
+			<column name="OA_NETMAIL_INBOX_SENDER" />
+		</property>
+		<property name="oaNetmailInboxTime" type="java.lang.String">
+			<column name="OA_NETMAIL_INBOX_TIME" />
+		</property>
+		<property name="oaNetmailInboxTitle" type="java.lang.String">
+			<column name="OA_NETMAIL_INBOX_TITLE" />
+		</property>
+		<property name="oaNetmailInboxContent" type="java.lang.String" >
+			<column name="OA_NETMAIL_INBOX_CONTENT" />
+		</property>
+		<property name="oaNetmailSetFrom" type="java.lang.String">
+			<column name="OA_NETMAIL_SET_FROM" />
+		</property>
+		<property name="oaNetmailInboxAffix" type="java.lang.String">
+			<column name="OA_NETMAIL_INBOX_AFFIX" />
+		</property>
+		<property name="oaNetmailInboxOther" type="java.lang.String">
+			<column name="OA_NETMAIL_INBOX_OTHER" />
+		</property>
+		<property name="oaNetmailInboxEmpid" type="java.lang.String">
+			<column name="OA_NETMAIL_INBOX_EMPID" />
+		</property>
+		<property name="recordId" type="java.lang.String">
+			<column name="RECORD_ID" />
+		</property>
+		<property name="recordDate" type="java.lang.String">
+			<column name="RECORD_DATE" />
+		</property>
+		<property name="companyId" type="java.lang.Integer">
+			<column name="COMPANY_ID" />
+		</property>
+		<property name="oaNetmailIsRead" type="java.lang.Integer">
+			<column name="OA_NETMAIL_ISREAD" />
+		</property>
+		<property name="oaNetmailUrgent" type="java.lang.Integer">
+			<column name="OA_NETMAIL_URGENT" />
+		</property>
+		<property name="oaNetmailType" type="java.lang.Integer">
+			<column name="OA_NETMAIL_TYPE" />
+		</property>
+		<property name="oaNetmailMessageId" type="java.lang.String">
+			<column name="OA_NETMAIL_MESSAGEID" />
+		</property>
+		<property name="oaNetmailSetId" type="java.lang.String">
+			<column name="OA_NETMAIL_SETID" />
+		</property>
+		<property name="oaNetmailReplySign" type="java.lang.Integer">
+			<column name="OA_NETMAIL_REPLYSIGN" />
+		</property>
+	</class>
+	<class name="com.pinhuba.core.pojo.OaNetmailUid" table="OA_NETMAIL_UID">
+		<id name="primaryKey" type="long">
+			<column name="OA_MAIL_ID" />
+			<generator class="sequence">
+				<param name="sequence">OA_MAIL_ID</param>
+			</generator>
+		</id>
+		<property name="oaMailUid" type="java.lang.String">
+			<column name="OA_MAIL_UID" />
+		</property>
+		<property name="oaMailSetId" type="java.lang.String">
+			<column name="OA_MAIL_SET_ID" />
+		</property>
+		<property name="oaMailTime" type="java.lang.String">
+			<column name="OA_MAIL_TIME" />
+		</property>
+		<property name="oaMailEmpId" type="java.lang.String">
+			<column name="oa_mail_empId" />
+		</property>
+		<property name="companyId" type="java.lang.Integer">
+			<column name="COMPANY_ID" />
+		</property>
+	</class>
+	
+	<class name="com.pinhuba.core.pojo.SysMethodShortcut" table="SYS_METHOD_SHORTCUT" >
+	    <id name="primaryKey" type="long">
+	        <column name="ID" />
+	        <generator class="sequence">
+				<param name="sequence">SYS_METHOD_SHORTCUT_ID</param>
+			</generator>
+	    </id>
+	    <property name="methodId" type="java.lang.String">
+	        <column name="METHOD_ID"/>
+	    </property>
+	    <property name="empId" type="java.lang.String">
+	        <column name="EMP_ID"/>
+	    </property>
+	    <property name="companyId" type="java.lang.Integer">
+	        <column name="COMPANY_ID"/>
+	    </property>
+	    <property name="autoOpen" type="java.lang.Integer">
+	        <column name="AUTO_OPEN"/>
+	    </property>
+	</class>
+	
+	<class name="com.pinhuba.core.pojo.HrmContract" table="HRM_CONTRACT" >
+	    <id name="primaryKey" type="java.lang.String">
+	        <column name="CONTRACT_ID" />
+	    </id>
+	    <property name="contractCode" type="java.lang.String">
+	        <column name="CONTRACT_CODE"/>
+	    </property>
+	    <property name="contractName" type="java.lang.String">
+	        <column name="CONTRACT_NAME"/>
+	    </property>
+	    <property name="contractLimitType" type="java.lang.Integer">
+	        <column name="CONTRACT_LIMIT_TYPE"/>
+	    </property>
+	    <property name="contractStatus" type="java.lang.Integer">
+	        <column name="CONTRACT_STATUS"/>
+	    </property>
+	   
+	    <property name="contractBegindate" type="java.lang.String">
+	        <column name="CONTRACT_BEGINDATE"/>
+	    </property>
+	    <property name="contractEnddate" type="java.lang.String">
+	        <column name="CONTRACT_ENDDATE"/>
+	    </property>
+	    <property name="contractContent" type="java.lang.String">
+	        <column name="CONTRACT_CONTENT"/>
+	    </property>
+	    <property name="contractFile" type="java.lang.String">
+	        <column name="CONTRACT_FILE"/>
+	    </property>
+	    
+	    <many-to-one name="contractType" class="com.pinhuba.core.pojo.HrmContractType" lazy="false" cascade="none">
+	    	<column name="CONTRACT_TYPE_ID"/>
+	    </many-to-one>
+	    
+	    <many-to-one name="employee" class="com.pinhuba.core.pojo.HrmEmployee" lazy="false" cascade="none">
+	    	<column name="EMP_ID"/>
+	    </many-to-one>
+	 
+	    <property name="recordId" type="java.lang.String">
+	        <column name="RECORD_ID"/>
+	    </property>
+	    <property name="recordDate" type="java.lang.String">
+	        <column name="RECORD_DATE"/>
+	    </property>
+	    <property name="lastmodiId" type="java.lang.String">
+	        <column name="LASTMODI_ID"/>
+	    </property>
+	    <property name="lastmodiDate" type="java.lang.String">
+	        <column name="LASTMODI_DATE"/>
+	    </property>
+	    <property name="companyId" type="java.lang.Integer">
+	        <column name="COMPANY_ID"/>
+	    </property>
+	</class>
+	
+	<class name="com.pinhuba.core.pojo.HrmContractType" table="HRM_CONTRACT_TYPE" >
+	    <id name="primaryKey" type="java.lang.String">
+	        <column name="TYPE_ID" />
+	    </id>
+	    <property name="typeName" type="java.lang.String">
+	        <column name="TYPE_NAME"/>
+	    </property>
+	    <property name="typeFile" type="java.lang.String">
+	        <column name="TYPE_FILE"/>
+	    </property>
+	    <property name="typeDesc" type="java.lang.String">
+	        <column name="TYPE_DESC"/>
+	    </property>
+	    <property name="recordId" type="java.lang.String">
+	        <column name="RECORD_ID"/>
+	    </property>
+	    <property name="recordDate" type="java.lang.String">
+	        <column name="RECORD_DATE"/>
+	    </property>
+	    <property name="lastmodiId" type="java.lang.String">
+	        <column name="LASTMODI_ID"/>
+	    </property>
+	    <property name="lastmodiDate" type="java.lang.String">
+	        <column name="LASTMODI_DATE"/>
+	    </property>
+	    <property name="companyId" type="java.lang.Integer">
+	        <column name="COMPANY_ID"/>
+	    </property>
+	</class>
+	<class name="com.pinhuba.core.pojo.SysProcessConfig" table="SYS_PROCESS_CONFIG" >
+	    <id name="primaryKey" type="java.lang.String">
+	        <column name="PROCESS_ID" />
+	    </id>
+	    <property name="processDesc" type="java.lang.String">
+	        <column name="PROCESS_DESC"/>
+	    </property>
+	    <property name="startPage" type="java.lang.String">
+	        <column name="START_PAGE"/>
+	    </property>
+	    <property name="handlePage" type="java.lang.String">
+	        <column name="HANDLE_PAGE"/>
+	    </property>
+	    <property name="detailPage" type="java.lang.String">
+	        <column name="DETAIL_PAGE"/>
+	    </property>
+	    
+	    <many-to-one name="processType" class="com.pinhuba.core.pojo.SysProcessType" lazy="false" cascade="none">
+	    	<column name="PROCESS_TYPE_ID"/>
+	    </many-to-one>
+	</class>
+	
+	<class name="com.pinhuba.core.pojo.SysProcessType" table="SYS_PROCESS_TYPE" >
+	    <id name="primaryKey" type="java.lang.String">
+	        <column name="TYPE_ID" />
+	    </id>
+	    <property name="typeName" type="java.lang.String">
+	        <column name="TYPE_NAME"/>
+	    </property>
+	    <property name="typeDesc" type="java.lang.String">
+	        <column name="TYPE_DESC"/>
+	    </property>
+	    <property name="priority" type="java.lang.Integer">
+	        <column name="TYPE_PRIORITY"/>
+	    </property>
+	    <property name="recordId" type="java.lang.String" update="false">
+	        <column name="RECORD_ID"/>
+	    </property>
+	    <property name="recordDate" type="java.lang.String" update="false">
+	        <column name="RECORD_DATE"/>
+	    </property>
+	    <property name="lastmodiId" type="java.lang.String">
+	        <column name="LASTMODI_ID"/>
+	    </property>
+	    <property name="lastmodiDate" type="java.lang.String">
+	        <column name="LASTMODI_DATE"/>
+	    </property>
+	</class>
+</hibernate-mapping>
+
+

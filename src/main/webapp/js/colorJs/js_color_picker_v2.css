@@ -1,0 +1,197 @@
+	#dhtmlgoodies_colorPicker{
+		position:absolute;
+		width:250px;
+		padding-bottom:1px;
+		background-color:#FFF;
+		border:1px solid #317082;
+		
+		width: 250px;	/* IE 5.x */
+		width/* */:/**/250px;	/* Other browsers */
+		width: /**/250px;	
+				
+	}
+	
+	#dhtmlgoodies_colorPicker .colorPicker_topRow{
+		padding-bottom:1px;
+		border-bottom:3px double #317082;
+		background-color:#E2EBED;
+		padding-left:2px;
+		
+		width: 250px;	/* IE 5.x */
+		width/* */:/**/250px;	/* Other browsers */
+		width: /**/250px;
+		
+		height: 20px;	/* IE 5.x */
+		height/* */:/**/20px;	/* Other browsers */
+		height: /**/20px;	
+				
+	}
+	
+	#dhtmlgoodies_colorPicker .colorPicker_statusBar{
+		height:13px;
+		padding-bottom:2px;
+		width:248px;
+		border-top:3px double #317082;	
+		background-color:#E2EBED;
+		padding-left:2px;
+		clear:both;
+		
+		width: 250px;	/* IE 5.x */
+		width/* */:/**/250px;	/* Other browsers */
+		width: /**/250px;	
+		
+		height: 18px;	/* IE 5.x */
+		height/* */:/**/18px;	/* Other browsers */
+		height: /**/18px;	
+						
+	}
+	
+	#dhtmlgoodies_colorPicker .colorSquare{
+		margin-left:1px;
+		margin-bottom:1px;
+		float:left;
+		border:1px solid #000;
+		cursor:pointer;
+		
+		width: 12px;	/* IE 5.x */
+		width/* */:/**/12px;	/* Other browsers */
+		width: /**/12px;	
+		
+		height: 12px;	/* IE 5.x */
+		height/* */:/**/12px;	/* Other browsers */
+		height: /**/12px;	
+				
+	}
+	
+	.colorPickerTab_inactive,.colorPickerTab_active{
+	
+		height:17px;
+		padding-left:4px;
+		cursor:pointer;	
+	}
+	
+	.colorPickerTab_inactive .tdleft{
+		background-image:url('../images/selectColor/tab_left_inactive.gif');
+		font-family:宋体;
+		font-size:12px;
+		padding-top:1px;
+		padding-left:4px;
+	}
+	
+	.colorPickerTab_active .tdleft{
+		background-image:url('../images/selectColor/tab_left_active.gif');
+		font-family:宋体;
+		font-size:12px;
+		padding-top:1px;
+		padding-left:4px;
+	}
+	/*
+	.colorPickerTab_inactive span, .colorPickerTab_active span{
+		line-height:16px;
+		font-family:宋体;
+		font-size:12px;
+		padding-top:1px;
+		vertical-align:middle;
+		background-position:top left;
+		background-repeat: no-repeat;	
+		float:left;
+		padding-left:4px;
+		-moz-user-select:no;
+	}	
+	.colorPickerTab_inactive img,.colorPickerTab_active img{
+		float:left;
+	}
+	*/
+	.colorPickerCloseButton{
+		width:11px;
+		height:11px;
+		text-align:center;
+		line-height:10px;
+		border:1px solid #317082;
+		position:absolute;
+		right:1px;
+		font-size:12px;
+		top:1px;
+		padding:1px;
+		cursor:pointer;	
+		
+		width: 15px;	/* IE 5.x */
+		width/* */:/**/15px;	/* Other browsers */
+		width: /**/15px;
+		
+		height: 15px;	/* IE 5.x */
+		height/* */:/**/15px;	/* Other browsers */
+		height: /**/15px;
+
+			
+	}
+	#colorPicker_statusBarTxt{
+		font-size:12px;
+		font-family:宋体;
+		vertical-align:top;
+		line-height:13px;
+
+	}
+	form{
+		padding-left:5px;
+	}
+	
+	.form_widget_amount_slider{
+		border-top:1px solid #9d9c99;
+		border-left:1px solid #9d9c99;
+		border-bottom:1px solid #eee;
+		border-right:1px solid #eee;
+		background-color:#f0ede0;
+		position:absolute;
+		bottom:0px;
+		
+		width: 5px;	/* IE 5.x */
+		width/* */:/**/5px;	/* Other browsers */
+		width: /**/5px;
+		
+		height: 5px;	/* IE 5.x */
+		height/* */:/**/5px;	/* Other browsers */
+		height: /**/5px;
+				
+	}
+	.colorSliderLabel{
+		width:15px;
+		height:20px;
+		float:left;
+		font-size:12px;
+		font-weight:bold;
+	}
+	.colorSlider{
+		width:175px;
+		height:20px;
+		float:left;
+	}
+	.colorInput{
+		width:45px;
+		height:20px;
+		float:left;
+	}	
+	.colorPreviewDiv{
+		width:186px;
+		margin-right:2px;
+		margin-top:1px;
+		border:1px solid #CCC;
+		height:20px;
+		float:left;
+		cursor:pointer;
+		
+		width: 188px;	/* IE 5.x */
+		width/* */:/**/188px;	/* Other browsers */
+		width: /**/188px;
+		
+		height: 22px;	/* IE 5.x */
+		height/* */:/**/22px;	/* Other browsers */
+		height: /**/22px;
+				
+
+	}
+	.colorCodeDiv{
+		width:50px;
+		height:20px;
+		float:left;
+	}

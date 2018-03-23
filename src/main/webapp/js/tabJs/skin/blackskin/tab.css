@@ -1,0 +1,83 @@
+@CHARSET "UTF-8";
+.tab{
+	FONT-SIZE: 14px;
+	FONT-FAMILY: "宋体";
+}
+.tabdiv{
+	FONT-SIZE:12px;
+	MARGIN: 0px auto;
+	WIDTH: 100%;
+}
+.tags{
+	PADDING-RIGHT: 0px;
+	PADDING-LEFT: 0px;
+	PADDING-BOTTOM: 0px;
+	MARGIN: 0px 0px 0px 10px;
+	WIDTH: 99%;
+	PADDING-TOP: 0px;
+	HEIGHT: 23px;
+}
+.tags LI {
+	BACKGROUND-color:#ffffff;
+	FLOAT: left;
+	MARGIN-RIGHT: 1px;
+	LIST-STYLE-TYPE: none;
+	HEIGHT: 23px;
+}
+.tags LI A {
+	PADDING-RIGHT: 10px;
+	PADDING-LEFT: 10px;
+	BACKGROUND-color:#ffffff;
+	FLOAT: left;
+	PADDING-BOTTOM: 0px;
+	COLOR: #808080;
+	LINE-HEIGHT: 23px;
+	PADDING-TOP: 0px;
+	HEIGHT: 23px;
+	TEXT-DECORATION: none;
+}
+.tags LI.emptyTag {
+	BACKGROUND: none transparent scroll repeat 0% 0%;
+	WIDTH: 4px;
+}
+.tags LI.selectTag {
+	BACKGROUND-POSITION: left top;
+	MARGIN-BOTTOM: -2px;
+	POSITION: relative;
+	HEIGHT: 25px;
+	
+}
+.tags LI.selectTag A {
+	BACKGROUND-POSITION: right top;
+	COLOR: #000;
+	LINE-HEIGHT: 25px;
+	HEIGHT: 25px;
+
+	BORDER-RIGHT: #c1c1c1 1px solid;
+	PADDING-RIGHT: 10px;
+	BORDER-TOP: #c1c1c1 1px solid;
+	PADDING-LEFT: 10px;
+	PADDING-BOTTOM: 1px;
+	BORDER-LEFT: #c1c1c1 1px solid;
+	PADDING-TOP: 1px;
+	BORDER-BOTTOM: #c1c1c1 0px solid;
+	BACKGROUND-COLOR: #fff;
+}
+.tagContentdiv {
+	BORDER-RIGHT: #c1c1c1 1px solid;
+	PADDING-RIGHT: 1px;
+	BORDER-TOP: #c1c1c1 1px solid;
+	PADDING-LEFT: 1px;
+	PADDING-BOTTOM: 1px;
+	BORDER-LEFT: #c1c1c1 1px solid;
+	PADDING-TOP: 1px;
+	BORDER-BOTTOM: #c1c1c1 1px solid;
+	BACKGROUND-COLOR: #fff;
+}
+.tagContent {
+	PADDING: 5px;
+	DISPLAY: none;
+	BACKGROUND-color:#ffffff;
+	COLOR: #ffffff;
+	overflow:auto;
+}

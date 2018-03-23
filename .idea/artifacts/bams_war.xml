@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="bams:war">
+    <output-path>$PROJECT_DIR$/target</output-path>
+    <root id="archive" name="bams-master.war">
+      <element id="artifact" artifact-name="bams:war exploded" />
+    </root>
+  </artifact>
+</component>

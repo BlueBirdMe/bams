@@ -1,0 +1,291 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:dwr="http://www.directwebremoting.org/schema/spring-dwr"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="
+    http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+    http://www.directwebremoting.org/schema/spring-dwr
+	http://www.directwebremoting.org/schema/spring-dwr-2.0.xsd">
+
+	<!--************************************************************************************-->
+    <!--************************************************************************************-->
+	<!--**********************                           ***********************************-->
+	<!--**********************         Dwr Base配置区开始             ***********************************-->
+	<!--**********************                           ***********************************-->
+	<!--************************************************************************************-->
+    <!--************************************************************************************-->
+
+	<dwr:configuration>  
+		<dwr:convert type="exception" class="java.lang.Exception"/>
+		<dwr:convert type="bean" class="java.lang.StackTraceElement"/>
+	
+		<dwr:convert type="bean" class="com.pinhuba.common.module.ResultBean"/>
+		<dwr:convert type="bean" class="com.pinhuba.common.pages.Pager"/>
+		<dwr:convert type="bean" class="com.pinhuba.common.util.CalenderBean"/>
+		<dwr:convert type="bean" class="com.pinhuba.common.module.UserMethodsInfo"/>
+		<dwr:convert type="bean" class="com.pinhuba.common.module.OnlineHrmEmployeeBean"/>
+		
+		<!-- 包装流程相关的实体类 -->
+		<dwr:convert type="bean" class="com.pinhuba.common.module.ApproveProcessBean"/>
+		<dwr:convert type="bean" class="com.pinhuba.common.module.ProcessUserBean"/>
+		<dwr:convert type="bean" class="com.pinhuba.common.module.ProcessInstanceBean"/>
+		<dwr:convert type="bean" class="com.pinhuba.common.module.TaskTodoBean"/>
+		<dwr:convert type="bean" class="com.pinhuba.common.module.ProcessModelBean"/>
+		<dwr:convert type="bean" class="com.pinhuba.common.module.HistoricProcessInstanceBean"/>
+		<dwr:convert type="bean" class="com.pinhuba.common.module.HistoricTaskInstanceBean"/>
+		
+		<dwr:convert type="hibernate3" class="com.pinhuba.core.pojo.SysAttachmentInfo"/>
+		<dwr:convert type="hibernate3" class="com.pinhuba.core.pojo.SysMethodInfo"/>
+		<dwr:convert type="hibernate3" class="com.pinhuba.core.pojo.SysMethodHelp"/>
+		<dwr:convert type="hibernate3" class="com.pinhuba.core.pojo.SysMethodBtn"/>
+		<dwr:convert type="hibernate3" class="com.pinhuba.core.pojo.SysCompanyMethods"/>
+		<dwr:convert type="hibernate3" class="com.pinhuba.core.pojo.SysMsg"/>
+		<dwr:convert type="hibernate3" class="com.pinhuba.core.pojo.SysHelp"/>
+		<dwr:convert type="hibernate3" class="com.pinhuba.core.pojo.SysLog"/>
+		<dwr:convert type="hibernate3" class="com.pinhuba.core.pojo.SysLogRuntime"/>
+		<dwr:convert type="hibernate3" class="com.pinhuba.core.pojo.SysException"/>
+		<dwr:convert type="hibernate3" class="com.pinhuba.core.pojo.SysUserInfo"/>
+		<dwr:convert type="hibernate3" class="com.pinhuba.core.pojo.SysColumnControl"/>
+		<dwr:convert type="hibernate3" class="com.pinhuba.core.pojo.SysImageInfo"/>
+		<dwr:convert type="hibernate3" class="com.pinhuba.core.pojo.SysCompanyInfo"/>
+		<dwr:convert type="hibernate3" class="com.pinhuba.core.pojo.SysUserMethods"/>
+		<dwr:convert type="hibernate3" class="com.pinhuba.core.pojo.SysUserBtns"/>
+		<dwr:convert type="hibernate3" class="com.pinhuba.core.pojo.SysUserGroup"/>
+		<dwr:convert type="hibernate3" class="com.pinhuba.core.pojo.SysUserGroupDetail"/>
+		<dwr:convert type="hibernate3" class="com.pinhuba.core.pojo.SysRole"/>
+		<dwr:convert type="hibernate3" class="com.pinhuba.core.pojo.SysRoleDetail"/>
+		<dwr:convert type="hibernate3" class="com.pinhuba.core.pojo.SysRoleBtn"/>
+		<dwr:convert type="hibernate3" class="com.pinhuba.core.pojo.SysRoleBind"/>
+		<dwr:convert type="hibernate3" class="com.pinhuba.core.pojo.SysLibraryInfo"/>
+		<dwr:convert type="hibernate3" class="com.pinhuba.core.pojo.SysLibraryStandard"/>
+		<dwr:convert type="hibernate3" class="com.pinhuba.core.pojo.SysConfig"/>
+		<dwr:convert type="hibernate3" class="com.pinhuba.core.pojo.SysParam"/>
+		<dwr:convert type="hibernate3" class="com.pinhuba.core.pojo.SysMethodShortcut"/>
+		<dwr:convert type="hibernate3" class="com.pinhuba.core.pojo.SysProcessConfig"/>
+		<dwr:convert type="hibernate3" class="com.pinhuba.core.pojo.SysProcessType"/>
+		
+		<dwr:convert type="hibernate3" class="com.pinhuba.core.pojo.HrmPost"/>
+		<dwr:convert type="hibernate3" class="com.pinhuba.core.pojo.HrmEmployee"/>
+		<dwr:convert type="hibernate3" class="com.pinhuba.core.pojo.HrmDepartment"/>
+		<dwr:convert type="hibernate3" class="com.pinhuba.core.pojo.HrmTimedrecord"/>
+		<dwr:convert type="hibernate3" class="com.pinhuba.core.pojo.HrmContract"/>
+		<dwr:convert type="hibernate3" class="com.pinhuba.core.pojo.HrmContractType"/>
+		<dwr:convert type="hibernate3" class="com.pinhuba.core.pojo.HrmWorkarea"/>
+		
+		<dwr:convert type="hibernate3" class="com.pinhuba.core.pojo.OaCarMaintain"/>
+		<dwr:convert type="hibernate3" class="com.pinhuba.core.pojo.OaWarehouse"/>
+		<dwr:convert type="hibernate3" class="com.pinhuba.core.pojo.OaWareType"/>
+		<dwr:convert type="hibernate3" class="com.pinhuba.core.pojo.OaWaretypeRange"/>
+		<dwr:convert type="hibernate3" class="com.pinhuba.core.pojo.OaBoardroom"/>
+		<dwr:convert type="hibernate3" class="com.pinhuba.core.pojo.OaAnnouncement"/>
+		<dwr:convert type="hibernate3" class="com.pinhuba.core.pojo.OaNotice"/>
+		<dwr:convert type="hibernate3" class="com.pinhuba.core.pojo.OaWorkLog"/>
+		<dwr:convert type="hibernate3" class="com.pinhuba.core.pojo.OaForms"/>
+		<dwr:convert type="hibernate3" class="com.pinhuba.core.pojo.OaAdversaria"/>
+		<dwr:convert type="hibernate3" class="com.pinhuba.core.pojo.OaMeetapply"/>
+		<dwr:convert type="hibernate3" class="com.pinhuba.core.pojo.OaJournalsType"/>
+		<dwr:convert type="hibernate3" class="com.pinhuba.core.pojo.OaJournals"/>
+		<dwr:convert type="hibernate3" class="com.pinhuba.core.pojo.OaSummary"/>
+		<dwr:convert type="hibernate3" class="com.pinhuba.core.pojo.OaCalender"/>
+		<dwr:convert type="hibernate3" class="com.pinhuba.core.pojo.OaCar"/>
+		<dwr:convert type="hibernate3" class="com.pinhuba.core.pojo.OaCarUse"/>
+    	<dwr:convert type="hibernate3" class="com.pinhuba.core.pojo.OaCarApply"/>
+		<dwr:convert type="hibernate3" class="com.pinhuba.core.pojo.OaAlbum"/>
+		<dwr:convert type="hibernate3" class="com.pinhuba.core.pojo.OaPhoto"/>
+		<dwr:convert type="hibernate3" class="com.pinhuba.core.pojo.OaCarMainten"/>
+		<dwr:convert type="hibernate3" class="com.pinhuba.core.pojo.OaChatters"/>
+		<dwr:convert type="hibernate3" class="com.pinhuba.core.pojo.OaChatGroups"/>
+		<dwr:convert type="hibernate3" class="com.pinhuba.core.pojo.OaSmsSend"/>
+		<dwr:convert type="hibernate3" class="com.pinhuba.core.pojo.OaSmsInbox"/>
+	    <dwr:convert type="hibernate3" class="com.pinhuba.core.pojo.OaBook"/>
+	    <dwr:convert type="hibernate3" class="com.pinhuba.core.pojo.OaRegulations"/>
+	    <dwr:convert type="hibernate3" class="com.pinhuba.core.pojo.OaBookBr"/>
+	    <dwr:convert type="hibernate3" class="com.pinhuba.core.pojo.OaForums"/>
+        <dwr:convert type="hibernate3" class="com.pinhuba.core.pojo.OaPosts"/>
+	    <dwr:convert type="hibernate3" class="com.pinhuba.core.pojo.OaMailInbox"/>
+	    <dwr:convert type="hibernate3" class="com.pinhuba.core.pojo.OaMailSend"/>
+	    <dwr:convert type="hibernate3" class="com.pinhuba.core.pojo.OaMailEmp"/>
+		<dwr:convert type="hibernate3" class="com.pinhuba.core.pojo.OaBookType"/>
+		<dwr:convert type="hibernate3" class="com.pinhuba.core.pojo.OaVote"/>
+		<dwr:convert type="hibernate3" class="com.pinhuba.core.pojo.OaVoteOption"/>
+		<dwr:convert type="hibernate3" class="com.pinhuba.core.pojo.OaVoteStatus"/>
+		
+		<dwr:convert type="hibernate3" class="com.pinhuba.core.pojo.OaLeaveregistration">
+			<dwr:exclude method ="historicProcessInstance,processDefinition" />  
+		</dwr:convert>
+		<dwr:convert type="hibernate3" class="com.pinhuba.core.pojo.OaTrsvel"/>
+		<dwr:convert type="hibernate3" class="com.pinhuba.core.pojo.OaTools"/>	
+		<dwr:convert type="hibernate3" class="com.pinhuba.core.pojo.OaNotebook"/>
+		<dwr:convert type="hibernate3" class="com.pinhuba.core.pojo.OaNetdiskShare"/>
+		<dwr:convert type="hibernate3" class="com.pinhuba.core.pojo.OaNetdiskConfig"/>
+		<dwr:convert type="hibernate3" class="com.pinhuba.core.pojo.OaDesktopSet"/>
+		
+		
+		<dwr:convert type="hibernate3" class="com.pinhuba.core.pojo.OaNetmailSet"/>
+		<dwr:convert type="hibernate3" class="com.pinhuba.core.pojo.OaNetmailPerson"/>
+		<dwr:convert type="hibernate3" class="com.pinhuba.core.pojo.OaNetmailSendbox"/>
+		<dwr:convert type="hibernate3" class="com.pinhuba.core.pojo.OaNetmailInbox"/>
+		<dwr:convert type="hibernate3" class="com.pinhuba.core.pojo.OaNetmailUid"/>
+		
+		
+		<dwr:convert type="hibernate3" class="org.activiti.engine.impl.persistence.entity.ProcessDefinitionEntity">
+			<dwr:include method ="id,deploymentId,name,key,version,resourceName,diagramResourceName,suspensionState" />  
+		</dwr:convert>
+		
+		<dwr:convert type="hibernate3" class="org.activiti.engine.impl.persistence.entity.DeploymentEntity">
+			<dwr:include method="id,name,category,deploymentTime" />
+		</dwr:convert>
+		<dwr:convert type="hibernate3" class="org.activiti.engine.impl.persistence.entity.ModelEntity">
+			<dwr:include method="id,revision,name,key,category,createTime,lastUpdateTime,version,metaInfo,deploymentId,editorSourceValueId,editorSourceExtraValueId"/>
+		</dwr:convert>
+		
+		<dwr:convert type="hibernate3" class="org.activiti.engine.impl.persistence.entity.GroupEntity"/>
+		<dwr:convert type="hibernate3" class="org.activiti.engine.impl.persistence.entity.UserEntity"/>
+		<dwr:convert type="hibernate3" class="org.activiti.engine.impl.persistence.entity.MembershipEntity"/>
+		
+		<dwr:convert type="hibernate3" class="org.activiti.engine.impl.persistence.entity.ExecutionEntity">
+			<dwr:include method="id,processInstanceId,businessKey,processDefinitionId,suspensionState,activityId"/>
+		</dwr:convert>
+		
+		<dwr:convert type="hibernate3" class="org.activiti.engine.impl.persistence.entity.TaskEntity">
+			<dwr:include method="id,revision,owner,assignee,parentTaskId,name,description,createTime,dueDate,suspensionState,executionId,processInstanceId,dueDate,taskDefinitionKey,eventName"/>
+		</dwr:convert>
+	
+		<dwr:convert type="hibernate3" class="org.activiti.engine.impl.persistence.entity.HistoricProcessInstanceEntity"/>
+		<dwr:convert type="hibernate3" class="org.activiti.engine.impl.persistence.entity.HistoricTaskInstanceEntity"/>
+		<dwr:convert type="hibernate3" class="org.activiti.engine.impl.persistence.entity.HistoricActivityInstanceEntity"/>
+		<dwr:convert type="hibernate3" class="org.activiti.engine.impl.persistence.entity.HistoricVariableInstanceEntity"/>
+		<dwr:convert type="hibernate3" class="org.activiti.engine.impl.persistence.entity.CommentEntity">
+			<dwr:include method="fullMessage"/>
+		</dwr:convert>
+
+		<!--2018年1月12日14:49:44新增-->
+		<dwr:convert type="hibernate3" class="com.pinhuba.core.pojo.DxArchivement"/>
+		<dwr:convert type="hibernate3" class="com.pinhuba.core.pojo.DxCorporation"/>
+		<dwr:convert type="hibernate3" class="com.pinhuba.core.pojo.DxEducate"/>
+		<dwr:convert type="hibernate3" class="com.pinhuba.core.pojo.DxPreSpec"/>
+		<dwr:convert type="hibernate3" class="com.pinhuba.core.pojo.DxUserinfo"/>
+		<dwr:convert type="hibernate3" class="com.pinhuba.core.pojo.DxArchivementTemp"/>
+		<dwr:convert type="hibernate3" class="com.pinhuba.core.pojo.DxEducateTemp"/>
+
+
+	</dwr:configuration>
+
+
+
+    <!--************************************************************************************-->
+    <!--************************************************************************************-->
+	<!--**********************                           ***********************************-->
+	<!--**********************         Dwr Serivce配置区开始   ***********************************-->
+	<!--**********************                           ***********************************-->
+	<!--************************************************************************************-->
+    <!--************************************************************************************-->
+    
+	<bean id="dwrHrmEmployeeService" class="com.pinhuba.web.controller.dwr.DwrHrmEmployeeService">
+		 <dwr:remote javascript="dwrHrmEmployeeService"/>
+	</bean>
+	<bean id="dwrHrmContractService" class="com.pinhuba.web.controller.dwr.DwrHrmContractService">
+		<dwr:remote javascript="dwrHrmContractService"></dwr:remote>
+	</bean>
+	<bean id="dwrSysProcessService" class="com.pinhuba.web.controller.dwr.DwrSysProcessService">
+		<dwr:remote javascript="dwrSysProcessService"/>
+	</bean>
+	<bean id="dwrCommonService" class="com.pinhuba.web.controller.dwr.DwrCommonService">
+		<dwr:remote javascript="dwrCommonService"/>
+	</bean>
+	<bean id="dwrWorkArrangeService" class="com.pinhuba.web.controller.dwr.DwrWorkArrangeService">
+		<dwr:remote javascript="dwrWorkArrangeService"/>
+	</bean>
+	<bean id="dwrOACompanyResourcesService" class="com.pinhuba.web.controller.dwr.DwrOACompanyResourcesService">
+		<dwr:remote javascript="dwrOACompanyResourcesService"/>
+	</bean>
+	<bean id="dwrOaNewsService" class="com.pinhuba.web.controller.dwr.DwrOaNewsService">
+		<dwr:remote javascript="dwrOaNewsService"/>
+	</bean>
+	<bean id="dwrOfficeResourcesService" class="com.pinhuba.web.controller.dwr.DwrOfficeResourcesService">
+		<dwr:remote javascript="dwrOfficeResourcesService"/>
+	</bean>
+	<bean id="dwrOaCommunicationService" class="com.pinhuba.web.controller.dwr.DwrOaCommunicationService">
+		<dwr:remote javascript="dwrOaCommunicationService"/>
+	</bean>
+	<bean id="dwrMoblieSmsService" class="com.pinhuba.web.controller.dwr.DwrMoblieSmsService">
+		<dwr:remote javascript="dwrMoblieSmsService"/>
+	</bean>
+	<bean id="dwrMailService" class="com.pinhuba.web.controller.dwr.DwrMailService">
+		<dwr:remote javascript="dwrMailService"/>
+	</bean>
+	<bean id="dwrApproveProcessService" class="com.pinhuba.web.controller.dwr.DwrApproveProcessService">
+		<dwr:remote javascript="dwrApproveProcessService"/>
+	</bean>
+	<bean id="dwrPersonalOfficeService" class="com.pinhuba.web.controller.dwr.DwrPersonalOfficeService">
+		<dwr:remote javascript="dwrPersonalOfficeService"/>
+	</bean>
+	<bean id="dwrPersonalProcessService" class="com.pinhuba.web.controller.dwr.DwrPersonalProcessService">
+		<dwr:remote javascript="dwrPersonalProcessService"/>
+	</bean>
+	<bean id="dwrOADesktopService" class="com.pinhuba.web.controller.dwr.DwrOADesktopService">
+		<dwr:remote javascript="dwrOADesktopService"/>
+	</bean>
+	<bean id="dwrNetdiskService" class="com.pinhuba.web.controller.dwr.DwrNetdiskService">
+		<dwr:remote javascript="dwrNetdiskService"/>
+	</bean>
+
+	<!--2018年1月12日14:56:22新增.用户user,userinfo管理、培训user,edu管理、业绩user,archi管理-->
+	<bean id="dwrDxUserinfoService" class="com.pinhuba.web.controller.dwr.DwrDxUserinfoService">
+		<dwr:remote javascript="dwrDxUserinfoService"/>
+	</bean>
+	<bean id="dwrDxPreSpecService" class="com.pinhuba.web.controller.dwr.DwrDxPreSpecService">
+		<dwr:remote javascript="dwrDxPreSpecService"/>
+	</bean>
+	<bean id="dwrDxEducateService" class="com.pinhuba.web.controller.dwr.DwrDxEducateService">
+		<dwr:remote javascript="dwrDxEducateService"/>
+	</bean>
+	<bean id="dwrDxCorporationService" class="com.pinhuba.web.controller.dwr.DwrDxCorporationService">
+		<dwr:remote javascript="dwrDxCorporationService"/>
+	</bean>
+	<bean id="dwrDxArchivementService" class="com.pinhuba.web.controller.dwr.DwrDxArchivementService">
+		<dwr:remote javascript="dwrDxArchivementService"/>
+	</bean>
+	<bean id="dwrDxArchivementTempService" class="com.pinhuba.web.controller.dwr.DwrDxArchivementTempService">
+		<dwr:remote javascript="dwrDxArchivementTempService"/>
+	</bean>
+	<bean id="dwrDxEducateTempService" class="com.pinhuba.web.controller.dwr.DwrDxEducateTempService">
+		<dwr:remote javascript="dwrDxEducateTempService"/>
+	</bean>
+
+
+
+
+
+
+
+
+	<!-- 拦截机制配置 -->
+	
+	<!-- 方法拦截 -->
+	<bean id="simpleAdvice" class="com.pinhuba.web.filter.springaop.SimpleAdvice"/>
+	
+	<!-- 异常捕捉 -->
+	<bean id="exceptionCatcherAdvice" class="com.pinhuba.web.filter.springaop.ExceptionCatcherAdvice"/>
+	
+	<!-- 拦截配置开始 使用BeanNameAutoProxyCreator -->
+	<!-- 
+	<bean id="simpleBeanProxy" class="org.springframework.aop.framework.autoproxy.BeanNameAutoProxyCreator">
+		<property name="beanNames">
+			<list>
+				<value>dwr*Service</value>
+			</list>
+		</property>
+		<property name="interceptorNames">
+			<list>
+				<value>simpleAdvice</value>
+				<value>exceptionCatcherAdvice</value>
+			</list>
+		</property>
+	</bean>
+	 -->
+	<!-- 拦截配置结束 -->
+
+
+</beans>

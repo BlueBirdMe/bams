@@ -1,0 +1,244 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<!--
+ * FCKeditor - The text editor for Internet - http://www.fckeditor.net
+ * Copyright (C) 2003-2009 Frederico Caldeira Knabben
+ *
+ * == BEGIN LICENSE ==
+ *
+ * Licensed under the terms of any of the following licenses at your
+ * choice:
+ *
+ *  - GNU General Public License Version 2 or later (the "GPL")
+ *    http://www.gnu.org/licenses/gpl.html
+ *
+ *  - GNU Lesser General Public License Version 2.1 or later (the "LGPL")
+ *    http://www.gnu.org/licenses/lgpl.html
+ *
+ *  - Mozilla Public License Version 1.1 or later (the "MPL")
+ *    http://www.mozilla.org/MPL/MPL-1.1.html
+ *
+ * == END LICENSE ==
+ *
+ * This page shows all resources available in a folder in the File Browser.
+-->
+<html>
+<head>
+	<title>Resources</title>
+	<link href="browser.css" type="text/css" rel="stylesheet">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<script type="text/javascript" src="js/common.js"></script>
+	<script type="text/javascript">
+
+var oListManager = new Object() ;
+
+oListManager.Clear = function()
+{
+	hiddenDiv();
+
+	document.getElementById("body_content").innerHTML = '' ; // body_content为我们在body区域增加的div标签
+
+}
+
+function ProtectPath(path)
+{
+	path = path.replace( /\\/g, '\\\\') ;
+	path = path.replace( /'/g, '\\\'') ;
+	return path ;
+}
+
+oListManager.GetFolderRowHtml = function( folderName, folderPath )
+{
+	// Build the link to view the folder.
+	var sLink = '<a href="#" onclick="OpenFolder(\'' + ProtectPath( folderPath ) + '\');return false;">' ;
+
+	return '<tr>' +
+			'<td width="16">' +
+				sLink +
+				'<img alt="" src="images/Folder.gif" width="16" height="16" border="0"><\/a>' +
+			'<\/td><td nowrap colspan="2">&nbsp;' +
+				sLink +
+				folderName +
+				'<\/a>' +
+		'<\/td><\/tr>' ;
+}
+
+oListManager.GetFileRowHtml = function( fileName, fileUrl, fileSize )
+{
+	// Build the link to view the folder.
+	var sLink = '<a href="#" onmouseover="showDiv(\'' + fileUrl + '\');" onclick="OpenFile(\'' + fileUrl.replace( /'/g, '\\\'') + '\');return false;">' ;
+
+	// Get the file icon.
+	var sIcon = oIcons.GetIcon( fileName ) ;
+
+	return '<tr>' +
+			'<td width="16">' +
+				sLink +
+				'<img alt="" src="images/icons/' + sIcon + '.gif" width="16" height="16" border="0"><\/a>' +
+			'<\/td><td>&nbsp;' +
+				sLink +
+				fileName +
+				'<\/a>' +
+			'<\/td><td align="right" nowrap>&nbsp;' +
+				fileSize +
+				' KB' +
+		'<\/td><\/tr>' ;
+}
+
+function OpenFolder( folderPath )
+{
+	// Load the resources list for this folder.
+	window.parent.frames['frmFolders'].LoadFolders( folderPath ) ;
+}
+
+function OpenFile( fileUrl )
+{
+	window.top.opener.SetUrl( encodeURI( fileUrl ).replace( '#', '%23' ) ) ;
+	window.top.close() ;
+	window.top.opener.focus() ;
+}
+
+function LoadResources( resourceType, folderPath )
+{
+	oListManager.Clear() ;
+	oConnector.ResourceType = resourceType ;
+	oConnector.CurrentFolder = folderPath ;
+	oConnector.SendCommand( 'GetFoldersAndFiles', null, GetFoldersAndFilesCallBack ) ;
+}
+
+function Refresh()
+{
+	hiddenDiv(); // 所作修改，为了刷新列表时默认隐藏文件显示层
+
+LoadResources( oConnector.ResourceType, oConnector.CurrentFolder ) ;
+
+
+}
+
+function GetFoldersAndFilesCallBack( fckXml )
+{
+	if ( oConnector.CheckError( fckXml ) != 0 )
+		return ;
+
+	// Get the current folder path.
+	var oFolderNode = fckXml.SelectSingleNode( 'Connector/CurrentFolder' ) ;
+	if ( oFolderNode == null )
+	{
+		alert( 'The server didn\'t reply with a proper XML data. Please check your configuration.' ) ;
+		return ;
+	}
+	var sCurrentFolderPath	= oFolderNode.attributes.getNamedItem('path').value ;
+	var sCurrentFolderUrl	= oFolderNode.attributes.getNamedItem('url').value ;
+
+//	var dTimer = new Date() ;
+
+	var oHtml = new StringBuilder( '<table id="tableFiles" cellspacing="1" cellpadding="0" width="100%" border="0">' ) ;
+
+	// Add the Folders.
+	var oNodes ;
+	oNodes = fckXml.SelectNodes( 'Connector/Folders/Folder' ) ;
+	for ( var i = 0 ; i < oNodes.length ; i++ )
+	{
+		var sFolderName = oNodes[i].attributes.getNamedItem('name').value ;
+		oHtml.Append( oListManager.GetFolderRowHtml( sFolderName, sCurrentFolderPath + sFolderName + "/" ) ) ;
+	}
+
+	// Add the Files.
+	oNodes = fckXml.SelectNodes( 'Connector/Files/File' ) ;
+	for ( var j = 0 ; j < oNodes.length ; j++ )
+	{
+		var oNode = oNodes[j] ;
+		var sFileName = oNode.attributes.getNamedItem('name').value ;
+		var sFileSize = oNode.attributes.getNamedItem('size').value ;
+
+		// Get the optional "url" attribute. If not available, build the url.
+		var oFileUrlAtt = oNodes[j].attributes.getNamedItem('url') ;
+		var sFileUrl = oFileUrlAtt != null ? oFileUrlAtt.value : sCurrentFolderUrl + sFileName ;
+
+		oHtml.Append( oListManager.GetFileRowHtml( sFileName, sFileUrl, sFileSize ) ) ;
+	}
+
+	oHtml.Append( '<\/table>' ) ;
+
+	document.getElementById("body_content").innerHTML = oHtml.ToString() ;
+
+
+//	window.top.document.title = 'Finished processing in ' + ( ( ( new Date() ) - dTimer ) / 1000 ) + ' seconds' ;
+
+}
+
+window.onload = function()
+{
+	window.top.IsLoadedResourcesList = true ;
+}
+// 显示文件显示层
+
+function showDiv( fileUrl )
+
+{
+
+var name = fileUrl;
+
+//获取文件类型
+
+var suffix = name.substring(name.lastIndexOf(".")+1);
+
+var div= document.getElementById("showFile");
+
+div.content = "";
+
+div.style.position = "absolute";
+
+div.content += "<table width='156' border='0' cellpadding='3' cellspacing='1' bgcolor='#737357'><tbody><tr><td height='23' align='left' bgcolor='#C7C78F'><table width='100%' height='100%' border='0' cellpadding='0' cellspacing='0'><tbody><tr><td width='48%' style='color=#336699'>文件预览</td><td width='48%' align='right'>&nbsp;<a href='javascript:' onClick='hiddenDiv();'><font color='#000000' style='text-decoration:none;'>关闭</font></a></td></tr></tbody></table></td></tr>";
+
+if (suffix=='gif' || suffix=="jpg" || suffix=="jpeg" || suffix=="bmp" || suffix=="png")
+
+{
+
+div.content += "<tr><td align='center' bgcolor='#C7C78F'><img src='" + fileUrl + "' onload='if(this.width>150) this.width=150' style='margin:3px;'></td></tr>";
+
+}
+
+else
+
+{
+
+div.content += "<tr><td height='35' align='center' bgcolor='#C7C78F'><strong>该类型不能预览</strong></td></tr>";
+
+}
+
+div.content += "</tbody></table>";
+
+div.innerHTML = div.content;
+
+div.style.display = "";
+
+div.style.top = event.y+document.body.scrollTop+10;
+
+div.style.left = event.x+document.body.scrollLeft+30;
+
+}
+
+// 隐藏文件显示层
+
+function hiddenDiv()
+
+{
+
+var div= document.getElementById("showFile");
+
+div.style.display ="none";
+
+}
+
+
+	</script>
+</head>
+<body class="FileArea">
+<div id="showFile" style="float:left; display:none; background-color:#999999"></div>
+
+<iframe id="iframe_del" name="iframe_del" width="0" height="0" scrolling="no"></iframe>
+
+<div id="body_content"></div>
+
+</body>
+</html>

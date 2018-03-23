@@ -1,0 +1,5 @@
+//复制到spring-service.xml文件 Dwr Serivce配置区
+<bean id="dwrDxEducateTempService" class="com.pinhuba.web.controller.dwr.DwrDxEducateTempService">
+    <dwr:remote javascript="dwrDxEducateTempService"/>
+</bean>
+

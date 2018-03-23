@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<tree>
+	<tree text="公司管理" action="treeclick('sys_company.jsp')"/>
+	<tree text="功能目录" action="treeclick('sys_method.jsp')"/>
+	<tree text="数据字典" action="treeclick('sys_library.jsp')"/>
+	<tree text="系统公告" action="treeclick('sys_msg.jsp')"/>
+	<tree text="系统帮助" action="treeclick('sys_help.jsp')"/>
+	<tree text="系统配置" action="treeclick('sysconfing.jsp')"/>
+	<tree text="运行参数" action="treeclick('sys_parammanger_company.jsp')"/>
+	<tree text="列表管理" action="treeclick('column_control.jsp')"/>
+	<tree text="帮助管理" action="treeclick('method_help.jsp')"/>
+	<tree text="运行监控">
+		<!-- 
+		<tree text="服务器信息" action="treeclick('sys_server_info.jsp')" />
+		 -->
+		<tree text="TOMCAT管理" action="treeclick('/manager/html')" />
+		<tree text="文件管理" action="treeclick('sys_filemanager.jsp')" />
+		<tree text="连接池监控" action="treeclick('proxoolsend.jsp')" />
+		<tree text="系统异常" action="treeclick('sys_exception.jsp')" />
+		<tree text="运行日志" action="treeclick('sys_log_manage.jsp')" />
+	</tree>
+	<tree text="开发人员工具箱">
+		<tree text="代码生成" action="treeclick('../code_create/code_create.jsp')" />
+		<tree text="开发实例" action="" />
+		<tree text="组件管理" action="" />
+	</tree>
+</tree>
