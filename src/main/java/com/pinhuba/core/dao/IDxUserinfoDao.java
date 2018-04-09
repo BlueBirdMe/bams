@@ -10,4 +10,5 @@ import java.util.Map;
  */
 public interface IDxUserinfoDao extends BaseDao<DxUserinfo,String>{
     public List<Object[]> countByHqlWhere(String s_age,String e_age,String deptName);
+    public List<Object[]> computeUserLev(String pk);
 }

@@ -15,4 +15,5 @@ public interface IDxUserinfoService{
     public DxUserinfo getDxUserinfoByPk(String pk);
     public void deleteDxUserinfoByPks(String[] pks);
     public List<Object[]> countUserByDept_Age(String s_age,String e_age, String deptName);
+    public List<Object[]> computeUserLev(String pk);
 }

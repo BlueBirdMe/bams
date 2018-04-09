@@ -170,4 +170,10 @@ public class DwrDxUserinfoService {
         return WebUtilWork.WebResultPack(list);
     }
 
+    public ResultBean computeUserLev(ServletContext context, HttpServletRequest request, String pk) {
+        List<Object[]> list = dxUserinfoService.computeUserLev(pk);
+        logger.info("按条件查询 DxUserinfo 列表...");
+        return WebUtilWork.WebResultPack(list);
+    }
+
 }

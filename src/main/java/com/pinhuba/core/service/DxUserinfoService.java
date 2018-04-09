@@ -59,4 +59,10 @@ public class DxUserinfoService implements IDxUserinfoService {
         List<Object[]>  list = dxUserinfoDao.countByHqlWhere(s_age,e_age,deptName);
         return list;
     }
+
+    @Override
+    public List<Object[]> computeUserLev(String pk) {
+        return dxUserinfoDao.computeUserLev(pk);
+    }
+
 }
